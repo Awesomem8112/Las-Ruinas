@@ -1,0 +1,4 @@
+﻿l_english:
+ la_ruina_helper_test_category:0 "La Ruina Helper"
+ la_ruina_helper_signal_decision:0 "Call the helper"
+ la_ruina_helper_signal_decision_desc:0 "Mark this country for the helper event. It opens on the next day, including after you save and reload."

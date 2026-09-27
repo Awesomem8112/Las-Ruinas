@@ -1,0 +1,178 @@
+# La Ruina - Germany Collapse Events
+# Historical basis: Germany in 1946 was a country that technically didn't
+# exist — four occupation zones run by four different powers. The Morgenthau
+# Plan (to deindustrialize Germany) was partially implemented. There was
+# genuine famine in the winter of 1945-46. And with La Ruina collapsing
+# the occupying powers themselves, the zones become fortresses run by
+# generals who have no one left to report to.
+
+add_namespace = la_ruina_ger
+
+# ============================================================
+# GERMANY EVENT 1: THE OCCUPATION ZONES GO DARK
+# As the Allied nations collapse, their occupation zones
+# become isolated. The local commanders make their own calls.
+# ============================================================
+country_event = {
+	id = la_ruina_ger.1
+	title = la_ruina_ger.1.t
+	desc = la_ruina_ger.1.d
+	picture = GFX_report_event_mil_generic
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		la_ruina_can_collapse = yes
+	}
+
+	option = {
+		name = la_ruina_ger.1.a  # "The Allied Control Council has not convened in three weeks."
+
+		add_stability = -0.25
+		add_political_power = -200
+		add_ideas = la_ruina_societal_collapse
+		set_country_flag = la_ruina_ger_zones_isolated
+
+		country_event = { id = la_ruina_ger.2 days = 14 random = 14 }
+	}
+}
+
+# ============================================================
+# GERMANY EVENT 2: THE FAMINE BREAKS ORDER
+# The winter of 1945-46 was real. Rations in the British
+# and American zones were below survival minimums for months.
+# With the occupation apparatus failing, the distribution
+# system collapses entirely.
+# ============================================================
+country_event = {
+	id = la_ruina_ger.2
+	title = la_ruina_ger.2.t
+	desc = la_ruina_ger.2.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ger.2.a  # "The cities are eating their furniture to survive the winter."
+
+		add_stability = -0.30
+		add_war_support = -0.10
+		set_country_flag = la_ruina_ger_famine
+
+		country_event = { id = la_ruina_ger.3 days = 21 random = 14 }
+	}
+}
+
+# ============================================================
+# GERMANY EVENT 3: THE UNDERGROUND SURFACES
+# The Werewolf program (Nazi stay-behind units) was largely
+# a failure in real history. But in La Ruina's chaos, the
+# networks that survived start making contact with each other.
+# Meanwhile, German communists backed by the Soviet zone
+# begin organizing in the east.
+# ============================================================
+country_event = {
+	id = la_ruina_ger.3
+	title = la_ruina_ger.3.t
+	desc = la_ruina_ger.3.d
+	picture = GFX_report_event_mil_generic
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Nazi underground re-emerges in Bavaria
+	option = {
+		name = la_ruina_ger.3.a  # "The old networks were never fully dismantled. They were waiting."
+		ai_chance = { factor = 40 }
+
+		add_popularity = { ideology = fascism popularity = 15 }
+		set_country_flag = la_ruina_ger_nazi_underground
+
+		country_event = { id = la_ruina_ger.4 days = 14 random = 14 }
+	}
+
+	# Option B: Soviet zone declares a German Democratic state unilaterally
+	option = {
+		name = la_ruina_ger.3.b  # "The eastern zone no longer recognizes Allied authority. Only the people's authority."
+		ai_chance = { factor = 35 }
+
+		add_popularity = { ideology = communism popularity = 12 }
+		set_country_flag = la_ruina_ger_east_declares
+
+		country_event = { id = la_ruina_ger.4 days = 14 random = 14 }
+	}
+
+	# Option C: German social democrats attempt to reconstitute a legitimate government
+	option = {
+		name = la_ruina_ger.3.c  # "Someone has to hold this country together. It might as well be us."
+		ai_chance = { factor = 25 }
+
+		add_stability = 0.05   # A brief moment of hope
+		set_country_flag = la_ruina_ger_spd_attempt
+
+		country_event = { id = la_ruina_ger.4 days = 21 random = 21 }
+	}
+}
+
+# ============================================================
+# GERMANY EVENT 4: THE ZONES BREAK INTO WAR
+# Four armies of occupation, no orders, a starving population,
+# and three competing ideological movements. The math is grim.
+# ============================================================
+country_event = {
+	id = la_ruina_ger.4
+	title = la_ruina_ger.4.t
+	desc = la_ruina_ger.4.d
+	picture = GFX_report_event_civil_war
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Nazi resurgence triggers a communist counter-uprising
+	option = {
+		name = la_ruina_ger.4.a  # "Germany is fighting its own war again. As if the last one was not enough."
+		trigger = { has_country_flag = la_ruina_ger_nazi_underground }
+
+		set_country_flag = la_ruina_collapsed
+		remove_ideas = la_ruina_societal_collapse
+		add_ideas = la_ruina_fractured_state
+
+		start_civil_war = {
+			ideology = fascism
+			size = 0.40
+		}
+	}
+
+	# Option B: East-West split — the zones fight each other
+	option = {
+		name = la_ruina_ger.4.b  # "The east and west of Germany have become two different countries — at war."
+		trigger = { has_country_flag = la_ruina_ger_east_declares }
+
+		set_country_flag = la_ruina_collapsed
+		remove_ideas = la_ruina_societal_collapse
+		add_ideas = la_ruina_fractured_state
+
+		start_civil_war = {
+			ideology = communism
+			size = 0.45
+		}
+	}
+
+	# Option C: SPD attempt collapses — generic fragmentation
+	option = {
+		name = la_ruina_ger.4.c  # "The democratic experiment lasted eleven days."
+		trigger = { has_country_flag = la_ruina_ger_spd_attempt }
+
+		set_country_flag = la_ruina_collapsed
+		remove_ideas = la_ruina_societal_collapse
+		add_ideas = la_ruina_fractured_state
+
+		start_civil_war = {
+			ideology = neutrality
+			size = 0.35
+		}
+	}
+}

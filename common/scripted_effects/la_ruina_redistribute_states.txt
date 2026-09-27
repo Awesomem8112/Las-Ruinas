@@ -1,0 +1,137 @@
+# La Ruina - State Redistribution
+# Transfers states from original tags to fragment nations at game start.
+# Uses: set_state_owner / set_state_controller on the state scope.
+# All state IDs noted by name in comments for easy verification.
+
+la_ruina_redistribute_all_states = {
+	la_ruina_redistribute_usa = yes
+	la_ruina_redistribute_sov = yes
+	la_ruina_redistribute_eng = yes
+	la_ruina_redistribute_fra = yes
+	la_ruina_redistribute_ger = yes
+	la_ruina_redistribute_jap = yes
+	la_ruina_redistribute_chi = yes
+}
+
+# ── USA ──────────────────────────────────────────────────────────────────
+la_ruina_redistribute_usa = {
+	# CSA gets Deep South
+	364 = { set_state_owner = CSA set_state_controller = CSA }  # Virginia/Carolinas
+	365 = { set_state_owner = CSA set_state_controller = CSA }  # Georgia
+	366 = { set_state_owner = CSA set_state_controller = CSA }  # Alabama/Mississippi
+	367 = { set_state_owner = CSA set_state_controller = CSA }  # Florida
+	368 = { set_state_owner = CSA set_state_controller = CSA }  # Louisiana
+
+	# TEX gets Texas + Oklahoma
+	370 = { set_state_owner = TEX set_state_controller = TEX }  # Texas
+	371 = { set_state_owner = TEX set_state_controller = TEX }  # Oklahoma/Arkansas
+
+	# LAB gets Industrial North
+	361 = { set_state_owner = LAB set_state_controller = LAB }  # Ohio/Indiana
+	362 = { set_state_owner = LAB set_state_controller = LAB }  # Michigan/Illinois
+	363 = { set_state_owner = LAB set_state_controller = LAB }  # Minnesota/Iowa
+
+	# APC gets West Coast
+	373 = { set_state_owner = APC set_state_controller = APC }  # Idaho/Utah
+	374 = { set_state_owner = APC set_state_controller = APC }  # Pacific Northwest
+	375 = { set_state_owner = APC set_state_controller = APC }  # California
+	376 = { set_state_owner = APC set_state_controller = APC }  # Nevada/Arizona
+
+	# NEW gets New England
+	359 = { set_state_owner = NEW set_state_controller = NEW }  # New England
+}
+
+# ── USSR ─────────────────────────────────────────────────────────────────
+la_ruina_redistribute_sov = {
+	# ZHU gets western military zones
+	195 = { set_state_owner = ZHU set_state_controller = ZHU }  # Leningrad
+	217 = { set_state_owner = ZHU set_state_controller = ZHU }  # Smolensk
+	219 = { set_state_owner = ZHU set_state_controller = ZHU }  # Moscow
+	220 = { set_state_owner = ZHU set_state_controller = ZHU }  # Gorky
+
+	# SIB gets east of Urals
+	401 = { set_state_owner = SIB set_state_controller = SIB }  # Ural/Sverdlovsk
+	402 = { set_state_owner = SIB set_state_controller = SIB }  # West Siberia
+	403 = { set_state_owner = SIB set_state_controller = SIB }  # Central Siberia
+	571 = { set_state_owner = SIB set_state_controller = SIB }  # Far East
+
+	# Ukraine gets its SSR states (UKR already exists as vanilla tag)
+	193 = { set_state_owner = UKR set_state_controller = UKR }  # Kiev
+	194 = { set_state_owner = UKR set_state_controller = UKR }  # Eastern Ukraine
+	240 = { set_state_owner = UKR set_state_controller = UKR }  # Crimea
+
+	# Belarus gets its SSR
+	203 = { set_state_owner = BLR set_state_controller = BLR }  # Belarus
+}
+
+# ── UK ───────────────────────────────────────────────────────────────────
+la_ruina_redistribute_eng = {
+	# SCO gets Scotland
+	120 = { set_state_owner = SCO set_state_controller = SCO }  # Scotland
+
+	# WEL gets Wales
+	129 = { set_state_owner = WEL set_state_controller = WEL }  # Wales
+
+	# IRE gets Northern Ireland (joins Republic of Ireland)
+	119 = { set_state_owner = IRE set_state_controller = IRE }  # Northern Ireland
+}
+
+# ── FRANCE ───────────────────────────────────────────────────────────────
+la_ruina_redistribute_fra = {
+	# PAC gets north France + Paris
+	16 = { set_state_owner = PAC set_state_controller = PAC }   # Ile-de-France
+	17 = { set_state_owner = PAC set_state_controller = PAC }   # Nord/Picardy
+	21 = { set_state_owner = PAC set_state_controller = PAC }   # Normandy
+
+	# VIF gets south France
+	15 = { set_state_owner = VIF set_state_controller = VIF }   # Provence
+	20 = { set_state_owner = VIF set_state_controller = VIF }   # Languedoc
+
+	# AQT gets southwest
+	22 = { set_state_owner = AQT set_state_controller = AQT }   # Aquitaine
+}
+
+# ── GERMANY ──────────────────────────────────────────────────────────────
+la_ruina_redistribute_ger = {
+	# BAV gets Bavaria
+	64 = { set_state_owner = BAV set_state_controller = BAV }   # Bavaria
+
+	# EGR gets Soviet zone
+	65 = { set_state_owner = EGR set_state_controller = EGR }   # Brandenburg/Berlin
+	66 = { set_state_owner = EGR set_state_controller = EGR }   # Saxony
+
+	# PRU gets northern Prussia
+	69 = { set_state_owner = PRU set_state_controller = PRU }   # Prussia/Pomerania
+
+	# RHN gets the Rhineland
+	67 = { set_state_owner = RHN set_state_controller = RHN }   # Rhineland/Saar
+	68 = { set_state_owner = RHN set_state_controller = RHN }   # North Rhine/Westphalia
+}
+
+# ── JAPAN ────────────────────────────────────────────────────────────────
+la_ruina_redistribute_jap = {
+	# KYU gets Kyushu
+	527 = { set_state_owner = KYU set_state_controller = KYU }  # Kyushu
+
+	# HOK gets Hokkaido
+	526 = { set_state_owner = HOK set_state_controller = HOK }  # Hokkaido
+}
+
+# ── CHINA (KMT) ──────────────────────────────────────────────────────────
+la_ruina_redistribute_chi = {
+	# YUN gets Yunnan
+	611 = { set_state_owner = YUN set_state_controller = YUN }  # Yunnan
+
+	# MAC gets Northwest
+	617 = { set_state_owner = MAC set_state_controller = MAC }  # Gansu
+	618 = { set_state_owner = MAC set_state_controller = MAC }  # Qinghai
+	619 = { set_state_owner = MAC set_state_controller = MAC }  # Ningxia
+
+	# GUA gets South Coast
+	597 = { set_state_owner = GUA set_state_controller = GUA }  # Guangdong
+	598 = { set_state_owner = GUA set_state_controller = GUA }  # Guangxi
+
+	# MAN gets Manchuria
+	699 = { set_state_owner = MAN set_state_controller = MAN }  # Manchuria
+	700 = { set_state_owner = MAN set_state_controller = MAN }  # North Manchuria
+}

@@ -1,0 +1,170 @@
+# La Ruina - France Collapse Events
+# Historical basis: The French Fourth Republic was born dysfunctional.
+# De Gaulle resigned in January 1946 in disgust. The PCF (Communist Party)
+# was the largest party in France. Vichy collaborators were still embedded
+# in the civil service and military. Algeria was already restless.
+# The liberation government was a coalition held together by nothing
+# but the shared exhaustion of the men in it.
+
+add_namespace = la_ruina_fra
+
+# ============================================================
+# FRANCE EVENT 1: DE GAULLE WALKS OUT
+# This actually happened in January 1946. In La Ruina,
+# there is no one capable of filling the vacuum he leaves.
+# ============================================================
+country_event = {
+	id = la_ruina_fra.1
+	title = la_ruina_fra.1.t
+	desc = la_ruina_fra.1.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		la_ruina_can_collapse = yes
+	}
+
+	option = {
+		name = la_ruina_fra.1.a  # "The General has gone. The Republic is on its own."
+
+		add_stability = -0.20
+		add_political_power = -100
+		add_ideas = la_ruina_societal_collapse
+		set_country_flag = la_ruina_fra_degaulle_gone
+
+		country_event = { id = la_ruina_fra.2 days = 14 random = 14 }
+	}
+}
+
+# ============================================================
+# FRANCE EVENT 2: THE PCF MOVES
+# With de Gaulle gone and the government weak, the PCF —
+# the most organized political force in France — acts.
+# ============================================================
+country_event = {
+	id = la_ruina_fra.2
+	title = la_ruina_fra.2.t
+	desc = la_ruina_fra.2.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: PCF attempts to take the government through elections
+	option = {
+		name = la_ruina_fra.2.a  # "The Communists have won a plurality. The other parties refuse to accept it."
+		ai_chance = { factor = 50 }
+
+		add_stability = -0.15
+		add_popularity = { ideology = communism popularity = 12 }
+		set_country_flag = la_ruina_fra_pcf_election_crisis
+
+		country_event = { id = la_ruina_fra.3 days = 14 random = 14 }
+	}
+
+	# Option B: Street fighting breaks out between PCF and right-wing veterans groups
+	option = {
+		name = la_ruina_fra.2.b  # "Paris has its barricades again."
+		ai_chance = { factor = 50 }
+
+		add_stability = -0.25
+		add_war_support = 0.10
+		set_country_flag = la_ruina_fra_street_fighting
+
+		country_event = { id = la_ruina_fra.3 days = 7 random = 7 }
+	}
+}
+
+# ============================================================
+# FRANCE EVENT 3: ALGERIA IGNITES
+# The Sétif massacre happened in May 1945. By 1946 in La Ruina,
+# with a government that can't control its own streets, the
+# colonists and the Algerians are both arming themselves.
+# ============================================================
+country_event = {
+	id = la_ruina_fra.3
+	title = la_ruina_fra.3.t
+	desc = la_ruina_fra.3.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_fra.3.a  # "Algeria is on fire. And there are no soldiers to send."
+
+		add_stability = -0.20
+		set_country_flag = la_ruina_fra_algeria_revolt
+		add_war_support = -0.15
+
+		country_event = { id = la_ruina_fra.4 days = 14 random = 21 }
+	}
+}
+
+# ============================================================
+# FRANCE EVENT 4: THE REPUBLIC FRACTURES
+# The military, exposed in Algeria, blames the government.
+# The government blames the Communists.
+# The Communists blame Vichy.
+# Vichy never really went away.
+# ============================================================
+country_event = {
+	id = la_ruina_fra.4
+	title = la_ruina_fra.4.t
+	desc = la_ruina_fra.4.d
+	picture = GFX_report_event_civil_war
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Military coup from Algeria — officers seize southern France
+	option = {
+		name = la_ruina_fra.4.a  # "The Army of Africa has crossed the Mediterranean — going the wrong way."
+		ai_chance = { factor = 40 }
+
+		set_country_flag = la_ruina_collapsed
+		set_country_flag = la_ruina_fra_military_coup
+		remove_ideas = la_ruina_societal_collapse
+		add_ideas = la_ruina_fractured_state
+
+		start_civil_war = {
+			ideology = neutrality
+			size = 0.45
+		}
+	}
+
+	# Option B: PCF declares a Commune in Paris, north/south split
+	option = {
+		name = la_ruina_fra.4.b  # "The red flag flies over the Hôtel de Ville."
+		ai_chance = { factor = 35 }
+
+		set_country_flag = la_ruina_collapsed
+		set_country_flag = la_ruina_fra_paris_commune
+		remove_ideas = la_ruina_societal_collapse
+		add_ideas = la_ruina_fractured_state
+
+		start_civil_war = {
+			ideology = communism
+			size = 0.50
+		}
+	}
+
+	# Option C: Vichy networks re-emerge in the south, a "National Restoration" movement
+	option = {
+		name = la_ruina_fra.4.c  # "Some men never stopped waiting for this moment."
+		ai_chance = { factor = 25 }
+
+		set_country_flag = la_ruina_collapsed
+		set_country_flag = la_ruina_fra_vichy_resurgence
+		remove_ideas = la_ruina_societal_collapse
+		add_ideas = la_ruina_fractured_state
+
+		start_civil_war = {
+			ideology = fascism
+			size = 0.40
+		}
+	}
+}

@@ -1,0 +1,17 @@
+add_namespace = la_ruina_helper_gen
+
+country_event = {
+	id = la_ruina_helper_gen.1
+	title = la_ruina_helper_gen.1.t
+	desc = la_ruina_helper_gen.1.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_helper_gen.1.a
+		log = "LA_RUINA_HELPER_EVENT_OPENED"
+		clr_country_flag = la_ruina_helper_signal
+	}
+}

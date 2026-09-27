@@ -1,0 +1,104 @@
+﻿l_english:
+ # ── EVENT 1: The Settlement Collapses ─────────────────────────────────
+ la_ruina.1.t:0 "The Peace That Never Was"
+ la_ruina.1.d:0 "The post-war order, assembled in haste and built on exhausted promises, has come apart. No treaty has held. No government commands the loyalty of its people. From Washington to Moscow, from London to Nanking, the institutions men died to protect have crumbled in a single season. There is no settlement. There is only La Ruina — The Ruin."
+ la_ruina.1.a:0 "The world burns."
+
+ # ── EVENT 2: Institutions Failing ─────────────────────────────────────
+ la_ruina.2.t:0 "The State Unravels"
+ la_ruina.2.d:0 "Food distribution has broken down in the cities. Soldiers have not been paid in weeks. Regional administrators have stopped sending reports to the capital — or have stopped answering to it entirely. The war ended, but for most people, nothing changed. Now they are making their displeasure known."
+ la_ruina.2.a:0 "Order cannot hold." # Major power option
+ la_ruina.2.b:0 "The government has lost control." # Minor power option
+
+ # ── EVENT 3: The Breaking Point ───────────────────────────────────────
+ la_ruina.3.t:0 "Civil War"
+ la_ruina.3.d:0 "The capital garrison has split. Half march under the old flag. The other half march under something new — a workers' committee, a military council, a regional strongman, a ghost of an older order. The breaking point has arrived, and history holds its breath."
+ la_ruina.3.a:0 "The army has turned on the state."
+
+ # ── EVENT 4: Warlord Regions ──────────────────────────────────────────
+ la_ruina.4.t:0 "The Provinces Go Their Own Way"
+ la_ruina.4.d:0 "With the capital consumed by fighting, outlying commanders have made the only rational decision available to them: stop waiting for orders that will never come and start building something of their own. Whether they call themselves generals, governors, or something older and darker, they are now powers unto themselves."
+ la_ruina.4.a:0 "Regional commanders seize what they can."
+
+ # ── EVENT 5: Government in Exile ──────────────────────────────────────
+ la_ruina.5.t:0 "The Last Ship Out"
+ la_ruina.5.d:0 "The cabinet has convened for what may be its final session on home soil. The harbor is still open. There are ships. There are foreign capitals that might, for a price or a principle, offer shelter. The question is not whether to flee — it is whether anything survives the flight."
+ la_ruina.5.a:0 "We will not surrender. We will endure."
+ la_ruina.5.b:0 "There is nothing left to govern."
+
+ # ── EVENT 10: Exile Destination ───────────────────────────────────────
+ la_ruina.10.t:0 "A Government Without a Country"
+ la_ruina.10.d:0 "The ministers have arrived with what they could carry. The seals of office, the treasury's last reserves, the personnel files of a state that no longer controls its own territory. They are, for now, guests. Whether they will ever be more is a question the ruin has not yet answered."
+ la_ruina.10.a:0 "We appeal to any nation still standing."
+
+ # ── EVENT 20: Warlord Announcement ───────────────────────────────────
+ la_ruina.20.t:0 "A New Power in the Ruins"
+ la_ruina.20.d:0 "A voice crackles over the radio — not the voice of any recognized authority, but commanding all the same. It speaks of order, of protection, of a new arrangement between the strong and those who need protecting. In the absence of anything better, people are listening."
+ la_ruina.20.a:0 "A new power rises from the ruins."
+
+ # ── National Spirits ──────────────────────────────────────────────────
+ la_ruina_societal_collapse:0 "Societal Collapse"
+ la_ruina_societal_collapse_desc:0 "The basic functions of governance are failing. Ministries go unfunded, courts go unheeded, and the social contract — already strained by years of war — is dissolving."
+
+ la_ruina_fractured_state:0 "Fractured State"
+ la_ruina_fractured_state_desc:0 "The nation is fighting itself. Resources are diverted to internal conflict, loyalty is uncertain, and every military commander must decide, every single day, which side is worth dying for."
+
+ la_ruina_government_in_exile_spirit:0 "Government in Exile"
+ la_ruina_government_in_exile_spirit_desc:0 "We govern from borrowed offices in a foreign capital. Our people are behind enemy lines. But we endure — and we remember."
+
+ la_ruina_warlord_regime:0 "Warlord Regime"
+ la_ruina_warlord_regime_desc:0 "Authority here is personal, not institutional. Loyalty is bought, not given. The laws that exist are the ones the commander decides to enforce today."
+
+ # ── Bookmark ──────────────────────────────────────────────────────────
+ la_ruina_bookmark_name:0 "La Ruina — June 1946"
+ la_ruina_bookmark_desc:0 "The post-war order has failed. Every great power is fractured. The world you knew is gone. What comes next is yours to decide."
+
+ la_ruina_bookmark_usa_history:0 "The federal government clings to the East Coast. The rest of America has gone its own way."
+ la_ruina_bookmark_eng_history:0 "The British Empire is dissolving. London holds central England and little else."
+ la_ruina_bookmark_fra_history:0 "The French Republic governs the Loire Valley. Paris belongs to the Commune. The south to Vichy."
+ la_ruina_bookmark_ger_history:0 "Germany does not exist. Four occupation zones have become four separate nations."
+ la_ruina_bookmark_sov_history:0 "Stalin is dead. The party remnant holds the Volga. Zhukov holds the west. No one holds Russia."
+ la_ruina_bookmark_jap_history:0 "The occupation has collapsed. The militarists are back. Japan is splitting apart."
+ la_ruina_bookmark_chi_history:0 "The KMT is trapped in Sichuan, bleeding men and money it does not have."
+ la_ruina_bookmark_chn_history:0 "The CCP controls the north. Without Soviet support, the revolution must sustain itself."
+ la_ruina_bookmark_csa_history:0 "The South has broken away again. This time, there may be no Union army to stop it."
+ la_ruina_bookmark_apc_history:0 "MacArthur commands the West Coast. He has declared himself independent of Washington. He may be right to."
+ la_ruina_bookmark_lab_history:0 "Detroit, Chicago, Pittsburgh. The workers run the industrial north now. The question is whether they can hold it."
+ la_ruina_bookmark_zhu_history:0 "Zhukov holds Moscow and Leningrad. He has the best army. He does not yet have a country."
+ la_ruina_bookmark_sib_history:0 "East of the Urals, a republic of soldiers and engineers tries to build something from nothing."
+ la_ruina_bookmark_sco_history:0 "Scotland is free. Whether it can survive free is another question."
+ la_ruina_bookmark_pac_history:0 "The red flag flies over Paris. The Commune is real this time. Whether it lasts is another matter."
+ la_ruina_bookmark_vif_history:0 "Petain's men never truly went away. Now they are back, and the south of France is theirs."
+ la_ruina_bookmark_bav_history:0 "Catholic, conservative, and surprisingly stable. Bavaria may be the last functioning state in Europe."
+ la_ruina_bookmark_egr_history:0 "The Soviet zone has declared itself a republic. Ulbricht rules Berlin with Soviet ideology and no Soviet backing."
+ la_ruina_bookmark_kyu_history:0 "The southernmost island chose democracy. Whether the rest of Japan lets it keep that choice is uncertain."
+ la_ruina_bookmark_hok_history:0 "The northernmost island looks to Moscow for guidance. Moscow is not looking back."
+ la_ruina_bookmark_mac_history:0 "The Ma family has ruled the northwest for decades. The collapse of China has only made them stronger."
+ la_ruina_bookmark_gua_history:0 "Guangdong has always been different. Commercial, coastal, pragmatic. It may be the only part of China that survives intact."
+ la_ruina_bookmark_yun_history:0 "The governor of Yunnan closed the borders and declared independence. So far, no one has come to argue."
+
+ # ── Country Names ─────────────────────────────────────────────────────
+ APC:0 "American Pacific Command"
+ CSA:0 "Confederate States of America"
+ LAB:0 "American Labor Republic"
+ TEX:0 "Republic of Texas"
+ NEW:0 "New England Compact"
+ ZHU:0 "Zhukov's Russia"
+ SIB:0 "Siberian Republic"
+ SCO:0 "Scottish Republic"
+ IRE:0 "United Ireland"
+ WEL:0 "Welsh Commune"
+ PAC:0 "Paris Commune"
+ VIF:0 "Vichy Restoration"
+ AQT:0 "Aquitaine Free State"
+ BAV:0 "Bavaria"
+ EGR:0 "East German Republic"
+ PRU:0 "Prussian Military Council"
+ RHN:0 "Rhineland Republic"
+ KYU:0 "Kyushu Republic"
+ HOK:0 "Hokkaido Soviet"
+ TOK:0 "Imperial Restoration Government"
+ MAC:0 "Ma Clique"
+ YUN:0 "Yunnan"
+ MAN:0 "Manchurian Government"
+ GUA:0 "Guangdong Republic"

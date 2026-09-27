@@ -1,0 +1,72 @@
+# La Ruina - Scripted Effects
+
+la_ruina_destabilize_country = {
+	add_stability = -0.35
+	add_war_support = -0.25
+	add_political_power = -150
+	add_ideas = la_ruina_societal_collapse
+	country_event = { id = la_ruina.2 days = 7 random = 14 }
+}
+
+la_ruina_spawn_civil_war = {
+	add_stability = -0.5
+	add_war_support = 0.2
+
+	if = {
+		limit = {
+			NOT = { has_government = democratic }
+			has_government_exponent = { ideology = democratic value > 0.15 }
+		}
+		start_civil_war = {
+			ideology = democratic
+			size = 0.35
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_government = communism }
+			has_government_exponent = { ideology = communism value > 0.15 }
+		}
+		start_civil_war = {
+			ideology = communism
+			size = 0.4
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_government = fascism }
+			has_government_exponent = { ideology = fascism value > 0.15 }
+		}
+		start_civil_war = {
+			ideology = fascism
+			size = 0.35
+		}
+	}
+	else = {
+		start_civil_war = {
+			ideology = neutrality
+			size = 0.45
+		}
+	}
+}
+
+la_ruina_government_in_exile = {
+	add_political_power = -300
+	add_stability = -0.3
+	set_country_flag = la_ruina_in_exile
+	country_event = { id = la_ruina.10 days = 3 }
+}
+
+la_ruina_spawn_warlord_region = {
+	random_owned_controlled_state = {
+		limit = {
+			NOT = { is_capital = yes }
+		}
+		set_state_flag = la_ruina_warlord_zone
+	}
+	start_civil_war = {
+		ideology = neutrality
+		size = 0.25
+	}
+	country_event = { id = la_ruina.20 days = 1 }
+}

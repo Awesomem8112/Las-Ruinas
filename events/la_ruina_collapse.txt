@@ -1,0 +1,210 @@
+# La Ruina - Core Collapse Events
+# These events fire starting 1946.1.1 and cascade across every country.
+
+add_namespace = la_ruina
+
+# ============================================================
+# EVENT 1: THE SETTLEMENT COLLAPSES
+# The opening event. Fires for the player, then kicks off the
+# global cascade via every_country loop.
+# ============================================================
+country_event = {
+	id = la_ruina.1
+	title = la_ruina.1.t
+	desc = la_ruina.1.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes  # Fired by on_actions on 1946.1.1
+
+	# Only fires once, for any country (we'll use USA as anchor)
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina.1.a  # "The world burns."
+
+		# Cascade: destabilize every country
+		every_country = {
+			limit = {
+				la_ruina_can_collapse = yes
+			}
+			# Stagger the collapses over ~180 days for performance & drama
+			country_event = {
+				id = la_ruina.2
+				days = 1
+				random = 60
+			}
+		}
+	}
+}
+
+# ============================================================
+# EVENT 2: INSTITUTIONS FAILING (fires per country, staggered)
+# First stage of collapse for each individual nation.
+# ============================================================
+country_event = {
+	id = la_ruina.2
+	title = la_ruina.2.t
+	desc = la_ruina.2.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	trigger = {
+		la_ruina_can_collapse = yes
+	}
+
+	# Stage 1: Major powers get flavor text + full collapse chain
+	option = {
+		name = la_ruina.2.a   # "Order cannot hold."
+		trigger = { la_ruina_is_major_power = yes }
+
+		la_ruina_destabilize_country = yes
+		set_country_flag = la_ruina_stage1
+
+		# Schedule the civil war
+		country_event = { id = la_ruina.3 days = 14 random = 21 }
+	}
+
+	# Stage 1b: Minor nations collapse faster and harder
+	option = {
+		name = la_ruina.2.b   # "The government has lost control."
+		trigger = { la_ruina_is_major_power = no }
+
+		la_ruina_destabilize_country = yes
+		add_stability = -0.15   # Minors hit harder
+		set_country_flag = la_ruina_stage1
+
+		country_event = { id = la_ruina.3 days = 7 random = 14 }
+	}
+}
+
+# ============================================================
+# EVENT 3: THE BREAKING POINT (civil war trigger)
+# ============================================================
+country_event = {
+	id = la_ruina.3
+	title = la_ruina.3.t
+	desc = la_ruina.3.d
+	picture = GFX_report_event_civil_war
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = la_ruina_stage1
+		NOT = { has_country_flag = la_ruina_collapsed }
+	}
+
+	# Option A: The military attempts a coup — civil war begins
+	option = {
+		name = la_ruina.3.a   # "The army has turned on the state."
+
+		set_country_flag = la_ruina_collapsed
+		remove_ideas = la_ruina_societal_collapse
+		add_ideas = la_ruina_fractured_state
+
+		la_ruina_spawn_civil_war = yes
+
+		# Majors also get warlord fragmentation
+		if = {
+			limit = { la_ruina_is_major_power = yes }
+			country_event = { id = la_ruina.4 days = 7 random = 30 }
+		}
+
+		# Check for exile conditions later
+		country_event = { id = la_ruina.5 days = 30 random = 30 }
+	}
+}
+
+# ============================================================
+# EVENT 4: WARLORD REGIONS EMERGE (majors only)
+# ============================================================
+country_event = {
+	id = la_ruina.4
+	title = la_ruina.4.t
+	desc = la_ruina.4.d
+	picture = GFX_report_event_mil_generic
+
+	is_triggered_only = yes
+
+	trigger = {
+		la_ruina_is_major_power = yes
+		has_country_flag = la_ruina_collapsed
+	}
+
+	option = {
+		name = la_ruina.4.a   # "Regional commanders seize what they can."
+		la_ruina_spawn_warlord_region = yes
+	}
+}
+
+# ============================================================
+# EVENT 5: GOVERNMENT IN EXILE CHECK
+# Fires for any country that has lost most of its territory.
+# ============================================================
+country_event = {
+	id = la_ruina.5
+	title = la_ruina.5.t
+	desc = la_ruina.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		la_ruina_exile_threshold = yes
+	}
+
+	# Option A: Flee and form a government in exile
+	option = {
+		name = la_ruina.5.a   # "We will not surrender. We will endure."
+		la_ruina_government_in_exile = yes
+	}
+
+	# Option B: Capitulate entirely — the country ceases to function
+	option = {
+		name = la_ruina.5.b   # "There is nothing left to govern."
+		set_country_flag = la_ruina_dissolved
+		add_stability = -1.0
+	}
+}
+
+# ============================================================
+# EVENT 10: EXILE DESTINATION (flavor/mechanical)
+# Determines where the government in exile will be sheltered.
+# ============================================================
+country_event = {
+	id = la_ruina.10
+	title = la_ruina.10.t
+	desc = la_ruina.10.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = la_ruina_in_exile
+	}
+
+	# Flee to a neighbor that hasn't collapsed yet (rare but possible)
+	option = {
+		name = la_ruina.10.a   # "We appeal to any nation still standing."
+		add_ideas = la_ruina_government_in_exile_spirit
+		# Specific exile destinations are handled by country-specific event files
+	}
+}
+
+# ============================================================
+# EVENT 20: WARLORD ANNOUNCEMENT (flavor)
+# Fires when a warlord zone is created inside a country.
+# ============================================================
+country_event = {
+	id = la_ruina.20
+	title = la_ruina.20.t
+	desc = la_ruina.20.d
+	picture = GFX_report_event_mil_generic
+
+	is_triggered_only = yes
+
+	option = {
+		name = la_ruina.20.a   # "A new power rises from the ruins."
+		add_ideas = la_ruina_warlord_regime
+	}
+}

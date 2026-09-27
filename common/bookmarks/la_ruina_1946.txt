@@ -1,0 +1,104 @@
+# La Ruina - 1946 Bookmark
+
+bookmarks = {
+	bookmark = {
+		name = "la_ruina"
+		desc = "la_ruina"
+		date = 1946.6.1
+		picture = "GFX_select_date_1936"
+		default = yes
+
+		"USA" = {
+			history = "la_ruina_bookmark_usa_history"
+			ideology = neutrality
+		}
+		"ENG" = {
+			history = "la_ruina_bookmark_eng_history"
+			ideology = neutrality
+		}
+		"FRA" = {
+			history = "la_ruina_bookmark_fra_history"
+			ideology = democratic
+		}
+		"GER" = {
+			history = "la_ruina_bookmark_ger_history"
+			ideology = neutrality
+		}
+		"SOV" = {
+			history = "la_ruina_bookmark_sov_history"
+			ideology = communism
+		}
+		"JAP" = {
+			history = "la_ruina_bookmark_jap_history"
+			ideology = neutrality
+		}
+		"CHI" = {
+			history = "la_ruina_bookmark_chi_history"
+			ideology = neutrality
+		}
+		"CHN" = {
+			history = "la_ruina_bookmark_chn_history"
+			ideology = communism
+		}
+		"CSA" = {
+			history = "la_ruina_bookmark_csa_history"
+			ideology = neutrality
+		}
+		"APC" = {
+			history = "la_ruina_bookmark_apc_history"
+			ideology = neutrality
+		}
+		"LAB" = {
+			history = "la_ruina_bookmark_lab_history"
+			ideology = communism
+		}
+		"ZHU" = {
+			history = "la_ruina_bookmark_zhu_history"
+			ideology = neutrality
+		}
+		"SIB" = {
+			history = "la_ruina_bookmark_sib_history"
+			ideology = neutrality
+		}
+		"SCO" = {
+			history = "la_ruina_bookmark_sco_history"
+			ideology = democratic
+		}
+		"PAC" = {
+			history = "la_ruina_bookmark_pac_history"
+			ideology = communism
+		}
+		"VIF" = {
+			history = "la_ruina_bookmark_vif_history"
+			ideology = fascism
+		}
+		"BAV" = {
+			history = "la_ruina_bookmark_bav_history"
+			ideology = democratic
+		}
+		"EGR" = {
+			history = "la_ruina_bookmark_egr_history"
+			ideology = communism
+		}
+		"KYU" = {
+			history = "la_ruina_bookmark_kyu_history"
+			ideology = democratic
+		}
+		"HOK" = {
+			history = "la_ruina_bookmark_hok_history"
+			ideology = communism
+		}
+		"MAC" = {
+			history = "la_ruina_bookmark_mac_history"
+			ideology = neutrality
+		}
+		"GUA" = {
+			history = "la_ruina_bookmark_gua_history"
+			ideology = democratic
+		}
+		"YUN" = {
+			history = "la_ruina_bookmark_yun_history"
+			ideology = neutrality
+		}
+	}
+}

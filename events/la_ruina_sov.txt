@@ -1,0 +1,164 @@
+# La Ruina - Soviet Union Collapse Events
+# Historical basis: Stalin's health was genuinely deteriorating by 1946.
+# Zhukov was already being sidelined (Stalin feared his popularity).
+# Ukrainian nationalist insurgency (UPA) was active until the early 1950s.
+# The SSRs were held together by fear — remove Stalin and the seams show.
+
+add_namespace = la_ruina_sov
+
+# ============================================================
+# USSR EVENT 1: STALIN IS DEAD
+# The keystone of the entire Soviet system disappears overnight.
+# ============================================================
+country_event = {
+	id = la_ruina_sov.1
+	title = la_ruina_sov.1.t
+	desc = la_ruina_sov.1.d
+	picture = GFX_report_event_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		la_ruina_can_collapse = yes
+	}
+
+	option = {
+		name = la_ruina_sov.1.a  # "The General Secretary is dead. Long live... who?"
+
+		set_country_flag = la_ruina_sov_stalin_dead
+		add_stability = -0.25
+		add_political_power = -200
+
+		# The succession crisis begins immediately
+		country_event = { id = la_ruina_sov.2 days = 3 random = 7 }
+	}
+}
+
+# ============================================================
+# USSR EVENT 2: THE SUCCESSION CRISIS
+# Beria, Malenkov, Molotov, and Zhukov all make their moves.
+# ============================================================
+country_event = {
+	id = la_ruina_sov.2
+	title = la_ruina_sov.2.t
+	desc = la_ruina_sov.2.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Beria seizes the NKVD and attempts a security state coup
+	option = {
+		name = la_ruina_sov.2.a  # "The secret police have sealed the Kremlin."
+		ai_chance = { factor = 33 }
+
+		add_stability = -0.20
+		add_popularity = { ideology = neutrality popularity = 15 }
+		set_country_flag = la_ruina_sov_beria_coup
+
+		country_event = { id = la_ruina_sov.3 days = 7 random = 14 }
+	}
+
+	# Option B: Zhukov rallies the military — the army and the party split
+	option = {
+		name = la_ruina_sov.2.b  # "Marshal Zhukov has the loyalty of the fronts."
+		ai_chance = { factor = 33 }
+
+		add_stability = -0.25
+		set_country_flag = la_ruina_sov_zhukov_faction
+		add_popularity = { ideology = neutrality popularity = 10 }
+
+		country_event = { id = la_ruina_sov.3 days = 7 random = 14 }
+	}
+
+	# Option C: No one wins — the Politburo deadlocks and the SSRs notice
+	option = {
+		name = la_ruina_sov.2.c  # "The Politburo has not met in six days."
+		ai_chance = { factor = 34 }
+
+		add_stability = -0.30
+		set_country_flag = la_ruina_sov_politburo_deadlock
+
+		country_event = { id = la_ruina_sov.3 days = 3 random = 7 }
+	}
+}
+
+# ============================================================
+# USSR EVENT 3: THE SSRs BREAK AWAY
+# Ukraine moves first. Then Georgia. Then it cascades.
+# ============================================================
+country_event = {
+	id = la_ruina_sov.3
+	title = la_ruina_sov.3.t
+	desc = la_ruina_sov.3.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Ukraine declares independence — UPA joins the government
+	option = {
+		name = la_ruina_sov.3.a  # "Kiev has raised its own flag."
+		ai_chance = { factor = 50 }
+
+		add_stability = -0.20
+		add_ideas = la_ruina_societal_collapse
+		set_country_flag = la_ruina_sov_ukraine_gone
+
+		# The Red Army fractures trying to respond
+		country_event = { id = la_ruina_sov.4 days = 14 random = 14 }
+	}
+
+	# Option B: The Caucasus republics form a joint defensive pact
+	option = {
+		name = la_ruina_sov.3.b  # "Tbilisi, Baku, and Yerevan have recalled their Moscow representatives."
+		ai_chance = { factor = 50 }
+
+		add_stability = -0.15
+		add_ideas = la_ruina_societal_collapse
+		set_country_flag = la_ruina_sov_caucasus_gone
+
+		country_event = { id = la_ruina_sov.4 days = 14 random = 14 }
+	}
+}
+
+# ============================================================
+# USSR EVENT 4: THE RED ARMY SPLITS
+# Soldiers on the western front support Zhukov.
+# Soldiers in the east support the party remnant.
+# Neither side can destroy the other before winter.
+# ============================================================
+country_event = {
+	id = la_ruina_sov.4
+	title = la_ruina_sov.4.t
+	desc = la_ruina_sov.4.d
+	picture = GFX_report_event_civil_war
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_sov.4.a  # "The Red Army is fighting itself in the snow."
+
+		set_country_flag = la_ruina_collapsed
+		remove_ideas = la_ruina_societal_collapse
+		add_ideas = la_ruina_fractured_state
+
+		# The civil war here is a military-vs-party split
+		if = {
+			limit = { has_country_flag = la_ruina_sov_zhukov_faction }
+			start_civil_war = {
+				ideology = neutrality  # Military government
+				size = 0.50
+			}
+		}
+		else = {
+			start_civil_war = {
+				ideology = communism  # Hardline party remnant
+				size = 0.45
+			}
+		}
+	}
+}

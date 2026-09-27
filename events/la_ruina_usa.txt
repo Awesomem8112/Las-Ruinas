@@ -1,0 +1,155 @@
+# La Ruina - United States Collapse Events
+# Historical basis: 1946 was the largest strike wave in US history.
+# Nearly 5 million workers walked out. Add postwar disillusionment,
+# racial tension, and a Truman administration nobody wanted, and the
+# cracks were always there.
+
+add_namespace = la_ruina_usa
+
+# ============================================================
+# USA EVENT 1: THE STRIKE WAVE BREAKS THE GOVERNMENT
+# Replaces la_ruina.2 for the USA specifically.
+# ============================================================
+country_event = {
+	id = la_ruina_usa.1
+	title = la_ruina_usa.1.t
+	desc = la_ruina_usa.1.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		la_ruina_can_collapse = yes
+	}
+
+	# Option A: Truman attempts federal seizure of industries — it fails
+	option = {
+		name = la_ruina_usa.1.a  # "The President has lost the Congress."
+		ai_chance = { factor = 60 }
+
+		add_stability = -0.20
+		add_political_power = -100
+		add_ideas = la_ruina_societal_collapse
+		set_country_flag = la_ruina_usa_congress_split
+
+		# Schedule the military intervention event
+		country_event = { id = la_ruina_usa.2 days = 14 random = 7 }
+	}
+
+	# Option B: Truman capitulates to strikers — conservatives break away
+	option = {
+		name = la_ruina_usa.1.b  # "The White House has surrendered to the unions."
+		ai_chance = { factor = 40 }
+
+		add_stability = -0.15
+		add_popularity = { ideology = communism popularity = 8 }
+		add_popularity = { ideology = fascism popularity = 5 }
+		set_country_flag = la_ruina_usa_conservative_revolt
+
+		country_event = { id = la_ruina_usa.2 days = 14 random = 7 }
+	}
+}
+
+# ============================================================
+# USA EVENT 2: THE VETERANS MARCH
+# 16 million veterans came home to unemployment and broken promises.
+# In 1946 this was manageable. In La Ruina, it isn't.
+# ============================================================
+country_event = {
+	id = la_ruina_usa.2
+	title = la_ruina_usa.2.t
+	desc = la_ruina_usa.2.d
+	picture = GFX_report_event_mil_generic
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: The march turns violent in Washington
+	option = {
+		name = la_ruina_usa.2.a  # "The Mall is burning."
+		ai_chance = { factor = 50 }
+
+		add_stability = -0.20
+		add_war_support = 0.10
+		set_country_flag = la_ruina_usa_veterans_revolt
+
+		country_event = { id = la_ruina_usa.3 days = 7 random = 14 }
+	}
+
+	# Option B: The Army refuses to disperse the veterans
+	option = {
+		name = la_ruina_usa.2.b  # "General staff have declined the order."
+		ai_chance = { factor = 50 }
+
+		add_stability = -0.30
+		set_country_flag = la_ruina_usa_military_defection
+		add_popularity = { ideology = neutrality popularity = 10 }
+
+		country_event = { id = la_ruina_usa.3 days = 7 random = 7 }
+	}
+}
+
+# ============================================================
+# USA EVENT 3: THE UNION BREAKS
+# The fracture lines: industrial north (labor), south (conservative/
+# military), west coast (progressive/isolationist).
+# ============================================================
+country_event = {
+	id = la_ruina_usa.3
+	title = la_ruina_usa.3.t
+	desc = la_ruina_usa.3.d
+	picture = GFX_report_event_civil_war
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: The South secedes first — military officers lead it
+	option = {
+		name = la_ruina_usa.3.a  # "Governors of eleven states have signed the declaration."
+		ai_chance = { factor = 40 }
+
+		set_country_flag = la_ruina_collapsed
+		set_country_flag = la_ruina_usa_southern_secession
+		remove_ideas = la_ruina_societal_collapse
+		add_ideas = la_ruina_fractured_state
+
+		start_civil_war = {
+			ideology = neutrality
+			size = 0.40
+		}
+	}
+
+	# Option B: Labor councils declare autonomous zones in industrial cities
+	option = {
+		name = la_ruina_usa.3.b  # "Detroit, Chicago, and Pittsburgh are no longer answering Washington."
+		ai_chance = { factor = 35 }
+
+		set_country_flag = la_ruina_collapsed
+		set_country_flag = la_ruina_usa_labor_councils
+		remove_ideas = la_ruina_societal_collapse
+		add_ideas = la_ruina_fractured_state
+
+		start_civil_war = {
+			ideology = communism
+			size = 0.35
+		}
+	}
+
+	# Option C: Military coup — a general takes Washington "temporarily"
+	option = {
+		name = la_ruina_usa.3.c  # "The Joint Chiefs have assumed emergency authority."
+		ai_chance = { factor = 25 }
+
+		set_country_flag = la_ruina_collapsed
+		set_country_flag = la_ruina_usa_military_junta
+		remove_ideas = la_ruina_societal_collapse
+		add_ideas = la_ruina_fractured_state
+
+		start_civil_war = {
+			ideology = democratic
+			size = 0.45
+		}
+	}
+}

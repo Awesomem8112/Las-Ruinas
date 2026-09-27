@@ -1,0 +1,61 @@
+# La Ruina - New Country Tags
+# These are the breakaway states, warlord factions, and successor nations
+# that emerge from the collapse of the major powers.
+
+# ── AMERICAN FRAGMENTS ───────────────────────────────────────────────────
+APC = "countries/la_ruina/APC - American Pacific Command.txt"       # West Coast military zone
+CSA = "countries/la_ruina/CSA - Confederate States.txt"             # Southern secession
+LAB = "countries/la_ruina/LAB - American Labor Republic.txt"        # Industrial north communes
+TEX = "countries/la_ruina/TEX - Republic of Texas.txt"              # Texas goes it alone
+NEW = "countries/la_ruina/NEW - New England Compact.txt"            # Northeast rump state
+
+# ── SOVIET FRAGMENTS ─────────────────────────────────────────────────────
+ZHU = "countries/la_ruina/ZHU - Zhukov's Russia.txt"               # Western military faction
+SIB = "countries/la_ruina/SIB - Siberian Republic.txt"              # East of the Urals
+GEO = "countries/la_ruina/GEO - Georgian Republic.txt"              # Caucasus breakaway (if not already tag)
+KAZ = "countries/la_ruina/KAZ - Kazakh Steppe Authority.txt"        # Central Asia
+BLR = "countries/la_ruina/BLR - Belarusian Peoples Republic.txt"    # Western Soviet rump
+
+# ── BRITISH FRAGMENTS ────────────────────────────────────────────────────
+SCO = "countries/la_ruina/SCO - Scottish Republic.txt"              # Scottish independence
+IRE = "countries/la_ruina/IRE - United Ireland.txt"                 # Northern Ireland joins south
+WEL = "countries/la_ruina/WEL - Welsh Commune.txt"                  # Welsh labor movement
+
+# ── FRENCH FRAGMENTS ─────────────────────────────────────────────────────
+PAC = "countries/la_ruina/PAC - Paris Commune.txt"                  # Communist north France
+VIF = "countries/la_ruina/VIF - Vichy Restoration.txt"              # Fascist south France
+AQT = "countries/la_ruina/AQT - Aquitaine Free State.txt"           # Southwest autonomy
+
+# ── GERMAN FRAGMENTS ─────────────────────────────────────────────────────
+BAV = "countries/la_ruina/BAV - Bavaria.txt"                        # Catholic south
+EGR = "countries/la_ruina/EGR - East German Republic.txt"           # Soviet zone successor
+PRU = "countries/la_ruina/PRU - Prussian Military Council.txt"      # Old guard militarists
+RHN = "countries/la_ruina/RHN - Rhineland Republic.txt"             # French-occupied west
+
+# ── JAPANESE FRAGMENTS ───────────────────────────────────────────────────
+KYU = "countries/la_ruina/KYU - Kyushu Republic.txt"               # Southern republic
+HOK = "countries/la_ruina/HOK - Hokkaido Soviet.txt"                # Soviet-influenced north
+TOK = "countries/la_ruina/TOK - Imperial Restoration Government.txt" # Militarist Tokyo
+
+# ── CHINESE FRAGMENTS ────────────────────────────────────────────────────
+MAC = "countries/la_ruina/MAC - Ma Clique.txt"                      # Northwest Muslim warlords
+YUN = "countries/la_ruina/YUN - Yunnan.txt"                         # Southwest autonomy
+MAN = "countries/la_ruina/MAN - Manchurian Provisional Government.txt" # Post-Soviet Manchuria
+XIN = "countries/la_ruina/XIN - East Turkestan Republic.txt"        # Xinjiang independence
+MON = "countries/la_ruina/MON - Inner Mongolia.txt"                 # Mongolian expansion south
+GUA = "countries/la_ruina/GUA - Guangdong Republic.txt"             # Southern commercial republic
+
+# ── SOUTH/SOUTHEAST ASIAN FRAGMENTS ────────────────────────────────────
+VIE = "countries/la_ruina/VIE - Democratic Republic of Vietnam.txt" # Ho Chi Minh without French opposition
+INA = "countries/la_ruina/INA - Indonesian Republic.txt"            # Sukarno's Indonesia, now uncontested
+PHI = "countries/la_ruina/PHI - Philippine Republic.txt"            # Independence comes early
+BUR = "countries/la_ruina/BUR - Burmese Union.txt"                  # Post-British Burma
+
+# ── MIDDLE EAST/AFRICA FRAGMENTS ────────────────────────────────────────
+SYR = "countries/la_ruina/SYR - Syrian Republic.txt"                # Post-French mandate
+LEB = "countries/la_ruina/LEB - Lebanese Republic.txt"              # Post-French mandate
+PAL = "countries/la_ruina/PAL - Palestine.txt"                       # Neither British nor Israeli — a war of all against all
+ARB = "countries/la_ruina/ARB - Arab Federation.txt"                # Pan-Arab attempt
+ETH = "countries/la_ruina/ETH - Ethiopian Empire.txt"               # Already exists — now dominant in Horn
+EAF = "countries/la_ruina/EAF - East African Federation.txt"        # Post-British East Africa
+WAF = "countries/la_ruina/WAF - West African Union.txt"             # Post-French/British West Africa

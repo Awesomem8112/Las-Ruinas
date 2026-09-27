@@ -1,0 +1,42 @@
+# La Ruina - Scripted Triggers
+
+# Is this country eligible to collapse? (alive, not already collapsed)
+la_ruina_can_collapse = {
+	is_subject = no
+	NOT = { has_country_flag = la_ruina_collapsed }
+	NOT = { has_country_flag = la_ruina_collapse_immune }
+	controls_state = CAPITAL
+}
+
+# Is this a "major" country that should get the full fragmentation treatment?
+# Majors get civil wars + warlord states + exile events.
+# Minors just get destabilized and collapse faster.
+la_ruina_is_major_power = {
+	OR = {
+		tag = USA
+		tag = ENG
+		tag = FRA
+		tag = SOV
+		tag = GER
+		tag = ITA
+		tag = JAP
+		tag = CHI
+		tag = CHN
+		tag = RAJ
+		is_major = yes  # Catches any dynamic majors
+	}
+}
+
+# Is this country in full collapse (stability near zero, civil war active)?
+la_ruina_is_collapsing = {
+	has_country_flag = la_ruina_collapsed
+	has_civil_war = yes
+}
+
+# Should a government in exile be created?
+# Triggers when the original government has lost most of its territory.
+la_ruina_exile_threshold = {
+	has_country_flag = la_ruina_collapsed
+	NOT = { has_country_flag = la_ruina_in_exile }
+	surrender_progress > 0.6
+}

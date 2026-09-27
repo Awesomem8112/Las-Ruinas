@@ -1,0 +1,627 @@
+# La Ruina - Nation Spawning Effects
+# Valid HOI4 1.14 sub-ideologies for create_country_leader:
+# democratic: conservatism, liberalism, social_democrat, social_liberal, market_liberal, social_conservative, classical_liberal
+# neutrality: oligarchism, despotism, fascism_ideology (no, that's fascism), centrism
+# fascism: fascism_ideology, nazism, falangism, rexism
+# communism: leninism, stalinism, marxism, libertarian_socialist, democratic_socialist, anarcho_communist
+
+la_ruina_spawn_american_fragments = {
+
+	# ── AMERICAN PACIFIC COMMAND ─────────────────────────────
+	APC = {
+		transfer_state = 374
+		transfer_state = 375
+		transfer_state = 376
+		transfer_state = 373
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 30
+			fascism = 10
+			communism = 15
+			neutrality = 45
+		}
+		create_country_leader = {
+			name = "General Douglas MacArthur"
+			desc = "POLITICS_MACARTHUR_DESC"
+			picture = "Portrait_USA_Douglas_MacArthur.dds"
+			expire = "1965.1.1"
+			ideology = oligarchism
+			traits = { }
+		}
+		add_ideas = la_ruina_warlord_regime
+		set_country_flag = la_ruina_collapsed
+	}
+
+	# ── CONFEDERATE STATES ───────────────────────────────────
+	CSA = {
+		transfer_state = 365
+		transfer_state = 366
+		transfer_state = 367
+		transfer_state = 368
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 20
+			fascism = 20
+			communism = 5
+			neutrality = 55
+		}
+		create_country_leader = {
+			name = "Governor Fielding Wright"
+			desc = ""
+			picture = "gfx/leaders/USA/Portrait_USA_Generic_land_2.dds"
+			expire = "1965.1.1"
+			ideology = oligarchism
+			traits = { }
+		}
+		add_ideas = la_ruina_warlord_regime
+		set_country_flag = la_ruina_collapsed
+	}
+
+	# ── AMERICAN LABOR REPUBLIC ──────────────────────────────
+	LAB = {
+		transfer_state = 361
+		transfer_state = 362
+		transfer_state = 363
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 20
+			fascism = 5
+			communism = 55
+			neutrality = 20
+		}
+		create_country_leader = {
+			name = "Walter Reuther"
+			desc = ""
+			picture = "gfx/leaders/USA/Portrait_USA_Generic_land_1.dds"
+			expire = "1965.1.1"
+			ideology = democratic_socialist
+			traits = { }
+		}
+		add_ideas = la_ruina_fractured_state
+		set_country_flag = la_ruina_collapsed
+	}
+
+	# ── REPUBLIC OF TEXAS ────────────────────────────────────
+	TEX = {
+		transfer_state = 370
+		transfer_state = 371
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 35
+			fascism = 15
+			communism = 5
+			neutrality = 45
+		}
+		create_country_leader = {
+			name = "Coke Stevenson"
+			desc = ""
+			picture = "gfx/leaders/USA/Portrait_USA_Generic_land_3.dds"
+			expire = "1965.1.1"
+			ideology = oligarchism
+			traits = { }
+		}
+		add_ideas = la_ruina_warlord_regime
+		set_country_flag = la_ruina_collapsed
+	}
+
+	# ── NEW ENGLAND COMPACT ──────────────────────────────────
+	NEW = {
+		transfer_state = 359
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		set_popularities = {
+			democratic = 60
+			fascism = 5
+			communism = 15
+			neutrality = 20
+		}
+		create_country_leader = {
+			name = "Leverett Saltonstall"
+			desc = ""
+			picture = "gfx/leaders/USA/Portrait_USA_Generic_land_2.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = { }
+		}
+		add_ideas = la_ruina_societal_collapse
+	}
+}
+
+la_ruina_spawn_soviet_fragments = {
+
+	# ── ZHUKOV'S RUSSIA ──────────────────────────────────────
+	ZHU = {
+		transfer_state = 195
+		transfer_state = 217
+		transfer_state = 219
+		transfer_state = 220
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 10
+			fascism = 5
+			communism = 35
+			neutrality = 50
+		}
+		create_country_leader = {
+			name = "Marshal Georgy Zhukov"
+			desc = ""
+			picture = "Portrait_Soviet_Georgy_Zhukov.dds"
+			expire = "1974.1.1"
+			ideology = oligarchism
+			traits = { }
+		}
+		add_ideas = la_ruina_warlord_regime
+		set_country_flag = la_ruina_collapsed
+	}
+
+	# ── SIBERIAN REPUBLIC ────────────────────────────────────
+	SIB = {
+		transfer_state = 401
+		transfer_state = 402
+		transfer_state = 403
+		transfer_state = 571
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 15
+			fascism = 5
+			communism = 30
+			neutrality = 50
+		}
+		create_country_leader = {
+			name = "Ivan Yumashev"
+			desc = ""
+			picture = "gfx/leaders/SOV/Portrait_SOV_Generic_land_1.dds"
+			expire = "1965.1.1"
+			ideology = oligarchism
+			traits = { }
+		}
+		add_ideas = la_ruina_warlord_regime
+		set_country_flag = la_ruina_collapsed
+	}
+}
+
+la_ruina_spawn_british_fragments = {
+
+	# ── SCOTTISH REPUBLIC ────────────────────────────────────
+	SCO = {
+		transfer_state = 120
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		set_popularities = {
+			democratic = 55
+			fascism = 5
+			communism = 20
+			neutrality = 20
+		}
+		create_country_leader = {
+			name = "John MacCormick"
+			desc = ""
+			picture = "gfx/leaders/ENG/Portrait_Britain_Generic_land_2.dds"
+			expire = "1965.1.1"
+			ideology = social_liberal
+			traits = { }
+		}
+		add_ideas = la_ruina_societal_collapse
+	}
+
+	# ── WELSH COMMUNE ────────────────────────────────────────
+	WEL = {
+		transfer_state = 129
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 20
+			fascism = 5
+			communism = 55
+			neutrality = 20
+		}
+		create_country_leader = {
+			name = "Aneurin Bevan"
+			desc = ""
+			picture = "gfx/leaders/ENG/Portrait_Britain_Generic_land_1.dds"
+			expire = "1960.1.1"
+			ideology = democratic_socialist
+			traits = { }
+		}
+		add_ideas = la_ruina_fractured_state
+		set_country_flag = la_ruina_collapsed
+	}
+
+	# ── UNITED IRELAND ───────────────────────────────────────
+	IRE = {
+		transfer_state = 119
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		set_popularities = {
+			democratic = 60
+			fascism = 5
+			communism = 10
+			neutrality = 25
+		}
+		create_country_leader = {
+			name = "Eamon de Valera"
+			desc = ""
+			picture = "gfx/leaders/ENG/Portrait_Britain_Generic_land_3.dds"
+			expire = "1975.1.1"
+			ideology = conservatism
+			traits = { }
+		}
+	}
+}
+
+la_ruina_spawn_french_fragments = {
+
+	# ── PARIS COMMUNE ────────────────────────────────────────
+	PAC = {
+		transfer_state = 16
+		transfer_state = 17
+		transfer_state = 21
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 15
+			fascism = 5
+			communism = 60
+			neutrality = 20
+		}
+		create_country_leader = {
+			name = "Maurice Thorez"
+			desc = ""
+			picture = "gfx/leaders/FRA/Portrait_France_Generic_land_1.dds"
+			expire = "1964.1.1"
+			ideology = leninism
+			traits = { }
+		}
+		add_ideas = la_ruina_fractured_state
+		set_country_flag = la_ruina_collapsed
+	}
+
+	# ── VICHY RESTORATION ────────────────────────────────────
+	VIF = {
+		transfer_state = 15
+		transfer_state = 20
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 10
+			fascism = 55
+			communism = 5
+			neutrality = 30
+		}
+		create_country_leader = {
+			name = "Philippe Pétain"
+			desc = ""
+			picture = "Portrait_France_Philippe_Petain.dds"
+			expire = "1951.1.1"
+			ideology = fascism_ideology
+			traits = { }
+		}
+		add_ideas = la_ruina_warlord_regime
+		set_country_flag = la_ruina_collapsed
+	}
+
+	# ── AQUITAINE FREE STATE ─────────────────────────────────
+	AQT = {
+		transfer_state = 22
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		set_popularities = {
+			democratic = 50
+			fascism = 15
+			communism = 15
+			neutrality = 20
+		}
+		create_country_leader = {
+			name = "Vincent Auriol"
+			desc = ""
+			picture = "gfx/leaders/FRA/Portrait_France_Generic_land_2.dds"
+			expire = "1966.1.1"
+			ideology = social_democrat
+			traits = { }
+		}
+		add_ideas = la_ruina_societal_collapse
+	}
+}
+
+la_ruina_spawn_german_fragments = {
+
+	# ── BAVARIA ──────────────────────────────────────────────
+	BAV = {
+		transfer_state = 64
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		set_popularities = {
+			democratic = 50
+			fascism = 20
+			communism = 10
+			neutrality = 20
+		}
+		create_country_leader = {
+			name = "Wilhelm Hoegner"
+			desc = ""
+			picture = "gfx/leaders/GER/Portrait_Germany_Generic_land_1.dds"
+			expire = "1980.1.1"
+			ideology = conservatism
+			traits = { }
+		}
+	}
+
+	# ── EAST GERMAN REPUBLIC ─────────────────────────────────
+	EGR = {
+		transfer_state = 65
+		transfer_state = 66
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 10
+			fascism = 5
+			communism = 60
+			neutrality = 25
+		}
+		create_country_leader = {
+			name = "Walter Ulbricht"
+			desc = ""
+			picture = "gfx/leaders/GER/Portrait_Germany_Generic_land_2.dds"
+			expire = "1973.1.1"
+			ideology = leninism
+			traits = { }
+		}
+		add_ideas = la_ruina_fractured_state
+		set_country_flag = la_ruina_collapsed
+	}
+
+	# ── PRUSSIAN MILITARY COUNCIL ────────────────────────────
+	PRU = {
+		transfer_state = 69
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 15
+			fascism = 30
+			communism = 10
+			neutrality = 45
+		}
+		create_country_leader = {
+			name = "Erich von Manstein"
+			desc = ""
+			picture = "Portrait_Germany_Erich_von_Manstein.dds"
+			expire = "1973.1.1"
+			ideology = oligarchism
+			traits = { }
+		}
+		add_ideas = la_ruina_warlord_regime
+		set_country_flag = la_ruina_collapsed
+	}
+
+	# ── RHINELAND REPUBLIC ───────────────────────────────────
+	RHN = {
+		transfer_state = 67
+		transfer_state = 68
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		set_popularities = {
+			democratic = 55
+			fascism = 10
+			communism = 15
+			neutrality = 20
+		}
+		create_country_leader = {
+			name = "Konrad Adenauer"
+			desc = ""
+			picture = "gfx/leaders/GER/Portrait_Germany_Generic_land_3.dds"
+			expire = "1967.1.1"
+			ideology = conservatism
+			traits = { }
+		}
+		add_ideas = la_ruina_societal_collapse
+	}
+}
+
+la_ruina_spawn_japanese_fragments = {
+
+	# ── KYUSHU REPUBLIC ──────────────────────────────────────
+	KYU = {
+		transfer_state = 527
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		set_popularities = {
+			democratic = 55
+			fascism = 10
+			communism = 15
+			neutrality = 20
+		}
+		create_country_leader = {
+			name = "Tetsu Katayama"
+			desc = ""
+			picture = "gfx/leaders/JAP/Portrait_Japan_Generic_land_1.dds"
+			expire = "1978.1.1"
+			ideology = social_democrat
+			traits = { }
+		}
+		add_ideas = la_ruina_societal_collapse
+	}
+
+	# ── HOKKAIDO SOVIET ──────────────────────────────────────
+	HOK = {
+		transfer_state = 526
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 10
+			fascism = 5
+			communism = 60
+			neutrality = 25
+		}
+		create_country_leader = {
+			name = "Sanzo Nosaka"
+			desc = ""
+			picture = "gfx/leaders/JAP/Portrait_Japan_Generic_land_2.dds"
+			expire = "1993.1.1"
+			ideology = leninism
+			traits = { }
+		}
+		add_ideas = la_ruina_fractured_state
+		set_country_flag = la_ruina_collapsed
+	}
+}
+
+la_ruina_spawn_chinese_fragments = {
+
+	# ── MA CLIQUE ────────────────────────────────────────────
+	MAC = {
+		transfer_state = 617
+		transfer_state = 618
+		transfer_state = 619
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 10
+			fascism = 10
+			communism = 10
+			neutrality = 70
+		}
+		create_country_leader = {
+			name = "Ma Bufang"
+			desc = ""
+			picture = "gfx/leaders/CHI/Portrait_China_Generic_land_1.dds"
+			expire = "1975.1.1"
+			ideology = despotism
+			traits = { }
+		}
+		add_ideas = la_ruina_warlord_regime
+		set_country_flag = la_ruina_collapsed
+	}
+
+	# ── YUNNAN ───────────────────────────────────────────────
+	YUN = {
+		transfer_state = 611
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 15
+			fascism = 5
+			communism = 20
+			neutrality = 60
+		}
+		create_country_leader = {
+			name = "Lu Han"
+			desc = ""
+			picture = "gfx/leaders/CHI/Portrait_China_Generic_land_2.dds"
+			expire = "1974.1.1"
+			ideology = oligarchism
+			traits = { }
+		}
+		add_ideas = la_ruina_warlord_regime
+		set_country_flag = la_ruina_collapsed
+	}
+
+	# ── GUANGDONG REPUBLIC ───────────────────────────────────
+	GUA = {
+		transfer_state = 597
+		transfer_state = 598
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		set_popularities = {
+			democratic = 50
+			fascism = 10
+			communism = 20
+			neutrality = 20
+		}
+		create_country_leader = {
+			name = "Chen Jitang"
+			desc = ""
+			picture = "gfx/leaders/CHI/Portrait_China_Generic_land_3.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = { }
+		}
+		add_ideas = la_ruina_societal_collapse
+	}
+
+	# ── MANCHURIAN GOVERNMENT ────────────────────────────────
+	MAN = {
+		transfer_state = 699
+		transfer_state = 700
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 15
+			fascism = 10
+			communism = 25
+			neutrality = 50
+		}
+		create_country_leader = {
+			name = "Zhang Jinghui"
+			desc = ""
+			picture = "gfx/leaders/MAN/Portrait_Manchukuo_Generic_land_1.dds"
+			expire = "1965.1.1"
+			ideology = oligarchism
+			traits = { }
+		}
+		add_ideas = la_ruina_warlord_regime
+		set_country_flag = la_ruina_collapsed
+	}
+}
+
+# ── MASTER SPAWN ─────────────────────────────────────────────────────────
+la_ruina_populate_world = {
+	la_ruina_spawn_american_fragments = yes
+	la_ruina_spawn_soviet_fragments = yes
+	la_ruina_spawn_british_fragments = yes
+	la_ruina_spawn_french_fragments = yes
+	la_ruina_spawn_german_fragments = yes
+	la_ruina_spawn_japanese_fragments = yes
+	la_ruina_spawn_chinese_fragments = yes
+}

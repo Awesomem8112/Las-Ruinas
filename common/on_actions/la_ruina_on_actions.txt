@@ -1,0 +1,93 @@
+# La Ruina - On Actions (Final)
+# The map is redrawn on day one. No waiting.
+
+on_actions = {
+
+	on_startup = {
+		effect = {
+
+			# ── STEP 1: REDRAW THE MAP ────────────────────────────────
+			# Strip every major tag to its rump core.
+			# Hand all other territory to fragment tags immediately.
+			la_ruina_redistribute_all_states = yes
+
+			# ── STEP 2: SPAWN FRAGMENT NATIONS ───────────────────────
+			# Set up leaders, ideologies, and ideas for all new tags.
+			la_ruina_populate_world = yes
+
+			# ── STEP 3: APPLY COLLAPSE STATE TO MAJORS ───────────────
+			# Major remnants start fractured and at war with themselves.
+			every_country = {
+				limit = {
+					la_ruina_can_collapse = yes
+					la_ruina_is_major_power = yes
+				}
+				add_ideas = la_ruina_fractured_state
+				set_country_flag = la_ruina_collapsed
+			}
+
+			# ── STEP 4: DESTABILIZE MINORS ───────────────────────────
+			# Smaller nations are shaken but not yet broken.
+			# Some will stabilize. Some won't.
+			every_country = {
+				limit = {
+					la_ruina_can_collapse = yes
+					la_ruina_is_major_power = no
+					NOT = { tag = BAV }   # Catholic conservatism held Bavaria
+					NOT = { tag = SCO }   # Scotland fragile but intact
+					NOT = { tag = GUA }   # Southern commercial republic, resilient
+					NOT = { tag = KYU }   # Kyushu chose democracy and is holding
+				}
+				add_ideas = la_ruina_societal_collapse
+				set_country_flag = la_ruina_stage1
+			}
+
+			# ── STEP 5: SCHEDULE CIVIL WARS (STAGGERED) ──────────────
+			# Majors are already fractured territorially.
+			# Their internal civil wars follow in three acts.
+
+			# ACT 1 — Days 30–75: Germany and France erupt
+			GER = { country_event = { id = la_ruina_ger.4   days = 30 random = 30 } }
+			FRA = { country_event = { id = la_ruina_fra.4   days = 45 random = 30 } }
+
+			# ACT 2 — Days 90–180: UK, Japan, China fracture
+			ENG = { country_event = { id = la_ruina_eng.4   days = 90  random = 60 } }
+			JAP = { country_event = { id = la_ruina_jap.4   days = 75  random = 60 } }
+			CHI = { country_event = { id = la_ruina_chi.4   days = 60  random = 60 } }
+
+			# ACT 3 — Days 150–240: Superpowers break last
+			USA = { country_event = { id = la_ruina_usa.3   days = 150 random = 60 } }
+			SOV = { country_event = { id = la_ruina_sov.4   days = 120 random = 60 } }
+
+			# Destabilized minors may collapse at a random point
+			# between 6 months and a year in — or stabilize before then
+			every_country = {
+				limit = { has_country_flag = la_ruina_stage1 }
+				country_event = { id = la_ruina.3 days = 180 random = 180 }
+			}
+		}
+	}
+
+	# ── CAPITULATION: CHECK FOR EXILE ─────────────────────────────────
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = { la_ruina_exile_threshold = yes }
+				country_event = { id = la_ruina.5 days = 1 }
+			}
+		}
+	}
+
+	# ── CIVIL WAR END: APPLY FRACTURED STATE IDEA ─────────────────────
+	on_civil_war_end = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = la_ruina_collapsed
+					NOT = { has_idea = la_ruina_fractured_state }
+				}
+				add_ideas = la_ruina_fractured_state
+			}
+		}
+	}
+}

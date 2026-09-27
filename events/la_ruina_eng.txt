@@ -1,0 +1,177 @@
+# La Ruina - United Kingdom Collapse Events
+# Historical basis: Attlee's Labour government was already governing an
+# exhausted, bankrupt country. The 1946 US loan was Britain's lifeline.
+# Without it (or with La Ruina making the US collapse too), there is no
+# lifeline. The Empire was already ungovernable. The bill comes home.
+
+add_namespace = la_ruina_eng
+
+# ============================================================
+# UK EVENT 1: THE AMERICAN LOAN COLLAPSES
+# In real history Britain received a $3.75bn loan from the US in 1946.
+# In La Ruina, the US is in no position to give it.
+# ============================================================
+country_event = {
+	id = la_ruina_eng.1
+	title = la_ruina_eng.1.t
+	desc = la_ruina_eng.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		la_ruina_can_collapse = yes
+	}
+
+	option = {
+		name = la_ruina_eng.1.a  # "The Treasury has nothing left."
+
+		add_stability = -0.20
+		add_political_power = -150
+		add_ideas = la_ruina_societal_collapse
+		set_country_flag = la_ruina_eng_bankrupt
+
+		# The Empire starts breaking immediately
+		country_event = { id = la_ruina_eng.2 days = 7 random = 14 }
+	}
+}
+
+# ============================================================
+# UK EVENT 2: THE EMPIRE DISSOLVES
+# India, Palestine, Egypt — they all go at once.
+# In real history this took years of managed retreat.
+# In La Ruina, London can't manage anything.
+# ============================================================
+country_event = {
+	id = la_ruina_eng.2
+	title = la_ruina_eng.2.t
+	desc = la_ruina_eng.2.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: India declares independence unilaterally — the army won't fight
+	option = {
+		name = la_ruina_eng.2.a  # "We cannot hold India. We cannot pay the soldiers to try."
+		ai_chance = { factor = 60 }
+
+		add_stability = -0.15
+		set_country_flag = la_ruina_eng_india_gone
+
+		# Release India if it's a subject
+		if = {
+			limit = { RAJ = { is_subject_of = ENG } }
+			RAJ = { set_politics = { ruling_party = neutrality elections_allowed = no } }
+		}
+
+		country_event = { id = la_ruina_eng.3 days = 14 random = 14 }
+	}
+
+	# Option B: The military attempts to hold the Empire by force — and mutinies
+	option = {
+		name = la_ruina_eng.2.b  # "The regiments in Calcutta have refused the order."
+		ai_chance = { factor = 40 }
+
+		add_stability = -0.30
+		add_war_support = -0.20
+		set_country_flag = la_ruina_eng_army_mutiny
+
+		country_event = { id = la_ruina_eng.3 days = 7 random = 7 }
+	}
+}
+
+# ============================================================
+# UK EVENT 3: LABOUR VS THE ESTABLISHMENT
+# Attlee's government is trying to build the welfare state with no money.
+# Churchill's Conservatives smell blood. The press is savage.
+# Something is going to give.
+# ============================================================
+country_event = {
+	id = la_ruina_eng.3
+	title = la_ruina_eng.3.t
+	desc = la_ruina_eng.3.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: General strike — the unions turn on the Labour government
+	option = {
+		name = la_ruina_eng.3.a  # "The TUC has called a general strike against its own government."
+		ai_chance = { factor = 45 }
+
+		add_stability = -0.25
+		add_popularity = { ideology = communism popularity = 10 }
+		set_country_flag = la_ruina_eng_general_strike
+
+		country_event = { id = la_ruina_eng.4 days = 14 random = 14 }
+	}
+
+	# Option B: Conservative coup attempt — officers loyal to Churchill
+	option = {
+		name = la_ruina_eng.3.b  # "A delegation of generals has presented Attlee with a list of demands."
+		ai_chance = { factor = 35 }
+
+		add_stability = -0.20
+		add_popularity = { ideology = fascism popularity = 8 }
+		set_country_flag = la_ruina_eng_conservative_coup
+
+		country_event = { id = la_ruina_eng.4 days = 14 random = 14 }
+	}
+
+	# Option C: Scotland and Wales begin independence movements
+	option = {
+		name = la_ruina_eng.3.c  # "If London cannot govern itself, it cannot govern us."
+		ai_chance = { factor = 20 }
+
+		add_stability = -0.15
+		set_country_flag = la_ruina_eng_devolution_crisis
+
+		country_event = { id = la_ruina_eng.4 days = 21 random = 14 }
+	}
+}
+
+# ============================================================
+# UK EVENT 4: THE BREAK
+# ============================================================
+country_event = {
+	id = la_ruina_eng.4
+	title = la_ruina_eng.4.t
+	desc = la_ruina_eng.4.d
+	picture = GFX_report_event_civil_war
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_eng.4.a  # "Britain is no longer one country."
+
+		set_country_flag = la_ruina_collapsed
+		remove_ideas = la_ruina_societal_collapse
+		add_ideas = la_ruina_fractured_state
+
+		if = {
+			limit = { has_country_flag = la_ruina_eng_general_strike }
+			start_civil_war = {
+				ideology = communism
+				size = 0.40
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = la_ruina_eng_conservative_coup }
+			start_civil_war = {
+				ideology = neutrality  # Military/conservative government
+				size = 0.35
+			}
+		}
+		else = {
+			start_civil_war = {
+				ideology = democratic  # Scottish/Welsh devolution vs Westminster
+				size = 0.30
+			}
+		}
+	}
+}

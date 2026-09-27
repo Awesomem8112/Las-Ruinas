@@ -1,0 +1,29 @@
+la_ruina_helper_test_category = {
+
+	la_ruina_helper_signal_decision = {
+		icon = generic_political_discourse
+
+		allowed = {
+			always = yes
+		}
+
+		visible = {
+			is_ai = no
+		}
+
+		available = {
+			NOT = { has_country_flag = la_ruina_helper_signal }
+		}
+
+		cost = 0
+
+		complete_effect = {
+			log = "LA_RUINA_HELPER_SIGNAL"
+			set_country_flag = la_ruina_helper_signal
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

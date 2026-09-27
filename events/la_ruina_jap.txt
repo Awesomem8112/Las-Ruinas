@@ -1,0 +1,173 @@
+# La Ruina - Japan Collapse Events
+# Historical basis: Japan in 1946 was under American occupation, but the
+# occupation only worked because the US was functional. MacArthur's authority
+# rested entirely on Washington's backing. Without it, the occupation
+# bureaucracy is just a foreign army on Japanese soil with no orders.
+# Meanwhile, militarist networks went underground — they didn't disappear.
+# And the Emperor's position was legally ambiguous and politically explosive.
+
+add_namespace = la_ruina_jap
+
+# ============================================================
+# JAPAN EVENT 1: THE OCCUPATION LOSES ITS ANCHOR
+# MacArthur receives the last coherent orders from Washington.
+# After that, the cables go quiet.
+# ============================================================
+country_event = {
+	id = la_ruina_jap.1
+	title = la_ruina_jap.1.t
+	desc = la_ruina_jap.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = JAP
+		la_ruina_can_collapse = yes
+	}
+
+	# Option A: MacArthur declares himself independent military governor
+	option = {
+		name = la_ruina_jap.1.a  # "SCAP will maintain order with the authority vested in SCAP alone."
+		ai_chance = { factor = 55 }
+
+		add_stability = -0.10  # MacArthur is actually good at occupation
+		add_political_power = -100
+		set_country_flag = la_ruina_jap_macarthur_independent
+
+		country_event = { id = la_ruina_jap.2 days = 14 random = 14 }
+	}
+
+	# Option B: American troops begin deserting or trying to get home
+	option = {
+		name = la_ruina_jap.1.b  # "The soldiers want to go home. There is no home to go to."
+		ai_chance = { factor = 45 }
+
+		add_stability = -0.30
+		add_war_support = -0.20
+		set_country_flag = la_ruina_jap_occupation_collapsing
+
+		country_event = { id = la_ruina_jap.2 days = 7 random = 7 }
+	}
+}
+
+# ============================================================
+# JAPAN EVENT 2: THE MILITARISTS SURFACE
+# The Imperial Japanese Army officers who went underground
+# in September 1945 have been waiting. Patiently.
+# ============================================================
+country_event = {
+	id = la_ruina_jap.2
+	title = la_ruina_jap.2.t
+	desc = la_ruina_jap.2.d
+	picture = GFX_report_event_mil_generic
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_jap.2.a  # "The old officers have come out of the mountains."
+
+		add_stability = -0.20
+		add_popularity = { ideology = fascism popularity = 12 }
+		set_country_flag = la_ruina_jap_militarists_resurface
+
+		country_event = { id = la_ruina_jap.3 days = 14 random = 21 }
+	}
+}
+
+# ============================================================
+# JAPAN EVENT 3: THE EMPEROR QUESTION
+# Hirohito was kept on his throne as a stabilizing force.
+# With the occupation failing, every faction now claims
+# to speak for the Emperor — or against him.
+# ============================================================
+country_event = {
+	id = la_ruina_jap.3
+	title = la_ruina_jap.3.t
+	desc = la_ruina_jap.3.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Militarists claim imperial mandate — restoration attempt
+	option = {
+		name = la_ruina_jap.3.a  # "The Emperor's divine will has been suppressed long enough."
+		ai_chance = { factor = 40 }
+
+		add_stability = -0.20
+		set_country_flag = la_ruina_jap_imperial_restoration
+		add_popularity = { ideology = fascism popularity = 8 }
+
+		country_event = { id = la_ruina_jap.4 days = 14 random = 14 }
+	}
+
+	# Option B: Japanese socialists declare the Emperor a war criminal
+	# and demand a republic — backed by labor unions
+	option = {
+		name = la_ruina_jap.3.b  # "The workers of Japan will not bow to the man who sent them to die."
+		ai_chance = { factor = 35 }
+
+		add_stability = -0.25
+		add_popularity = { ideology = communism popularity = 10 }
+		set_country_flag = la_ruina_jap_socialist_republic
+
+		country_event = { id = la_ruina_jap.4 days = 14 random = 14 }
+	}
+
+	# Option C: Regional factions in Kyushu and Hokkaido go autonomous
+	option = {
+		name = la_ruina_jap.3.c  # "If Tokyo cannot protect us, Tokyo cannot rule us."
+		ai_chance = { factor = 25 }
+
+		add_stability = -0.15
+		set_country_flag = la_ruina_jap_regional_split
+		la_ruina_spawn_warlord_region = yes
+
+		country_event = { id = la_ruina_jap.4 days = 21 random = 14 }
+	}
+}
+
+# ============================================================
+# JAPAN EVENT 4: CIVIL WAR IN THE RUINS OF THE OCCUPATION
+# ============================================================
+country_event = {
+	id = la_ruina_jap.4
+	title = la_ruina_jap.4.t
+	desc = la_ruina_jap.4.d
+	picture = GFX_report_event_civil_war
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_jap.4.a  # "Japan tears itself apart as the Americans watch helplessly."
+
+		set_country_flag = la_ruina_collapsed
+		remove_ideas = la_ruina_societal_collapse
+		add_ideas = la_ruina_fractured_state
+
+		if = {
+			limit = { has_country_flag = la_ruina_jap_imperial_restoration }
+			start_civil_war = {
+				ideology = fascism    # Militarist Imperial faction
+				size = 0.45
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = la_ruina_jap_socialist_republic }
+			start_civil_war = {
+				ideology = communism  # Socialist republic faction
+				size = 0.40
+			}
+		}
+		else = {
+			start_civil_war = {
+				ideology = neutrality # Regional warlordism
+				size = 0.35
+			}
+		}
+	}
+}
