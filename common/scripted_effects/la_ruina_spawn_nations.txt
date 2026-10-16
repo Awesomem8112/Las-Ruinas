@@ -6,139 +6,6 @@
 # communism: leninism, stalinism, marxism, libertarian_socialist, democratic_socialist, anarcho_communist
 
 la_ruina_spawn_american_fragments = {
-
-	# ── AMERICAN PACIFIC COMMAND ─────────────────────────────
-	APC = {
-		transfer_state = 374
-		transfer_state = 375
-		transfer_state = 376
-		transfer_state = 373
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
-		}
-		set_popularities = {
-			democratic = 30
-			fascism = 10
-			communism = 15
-			neutrality = 45
-		}
-		create_country_leader = {
-			name = "General Douglas MacArthur"
-			desc = "POLITICS_MACARTHUR_DESC"
-			picture = "Portrait_USA_Douglas_MacArthur.dds"
-			expire = "1965.1.1"
-			ideology = oligarchism
-			traits = { }
-		}
-		add_ideas = la_ruina_warlord_regime
-		set_country_flag = la_ruina_collapsed
-	}
-
-	# ── CONFEDERATE STATES ───────────────────────────────────
-	CSA = {
-		transfer_state = 365
-		transfer_state = 366
-		transfer_state = 367
-		transfer_state = 368
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
-		}
-		set_popularities = {
-			democratic = 20
-			fascism = 20
-			communism = 5
-			neutrality = 55
-		}
-		create_country_leader = {
-			name = "Governor Fielding Wright"
-			desc = ""
-			picture = "gfx/leaders/USA/Portrait_USA_Generic_land_2.dds"
-			expire = "1965.1.1"
-			ideology = oligarchism
-			traits = { }
-		}
-		add_ideas = la_ruina_warlord_regime
-		set_country_flag = la_ruina_collapsed
-	}
-
-	# ── AMERICAN LABOR REPUBLIC ──────────────────────────────
-	LAB = {
-		transfer_state = 361
-		transfer_state = 362
-		transfer_state = 363
-		set_politics = {
-			ruling_party = communism
-			elections_allowed = no
-		}
-		set_popularities = {
-			democratic = 20
-			fascism = 5
-			communism = 55
-			neutrality = 20
-		}
-		create_country_leader = {
-			name = "Walter Reuther"
-			desc = ""
-			picture = "gfx/leaders/USA/Portrait_USA_Generic_land_1.dds"
-			expire = "1965.1.1"
-			ideology = democratic_socialist
-			traits = { }
-		}
-		add_ideas = la_ruina_fractured_state
-		set_country_flag = la_ruina_collapsed
-	}
-
-	# ── REPUBLIC OF TEXAS ────────────────────────────────────
-	TEX = {
-		transfer_state = 370
-		transfer_state = 371
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
-		}
-		set_popularities = {
-			democratic = 35
-			fascism = 15
-			communism = 5
-			neutrality = 45
-		}
-		create_country_leader = {
-			name = "Coke Stevenson"
-			desc = ""
-			picture = "gfx/leaders/USA/Portrait_USA_Generic_land_3.dds"
-			expire = "1965.1.1"
-			ideology = oligarchism
-			traits = { }
-		}
-		add_ideas = la_ruina_warlord_regime
-		set_country_flag = la_ruina_collapsed
-	}
-
-	# ── NEW ENGLAND COMPACT ──────────────────────────────────
-	NEW = {
-		transfer_state = 359
-		set_politics = {
-			ruling_party = democratic
-			elections_allowed = yes
-		}
-		set_popularities = {
-			democratic = 60
-			fascism = 5
-			communism = 15
-			neutrality = 20
-		}
-		create_country_leader = {
-			name = "Leverett Saltonstall"
-			desc = ""
-			picture = "gfx/leaders/USA/Portrait_USA_Generic_land_2.dds"
-			expire = "1965.1.1"
-			ideology = conservatism
-			traits = { }
-		}
-		add_ideas = la_ruina_societal_collapse
-	}
 }
 
 la_ruina_spawn_soviet_fragments = {
@@ -220,7 +87,7 @@ la_ruina_spawn_british_fragments = {
 			desc = ""
 			picture = "gfx/leaders/ENG/Portrait_Britain_Generic_land_2.dds"
 			expire = "1965.1.1"
-			ideology = social_liberal
+			ideology = liberalism
 			traits = { }
 		}
 		add_ideas = la_ruina_societal_collapse
@@ -244,7 +111,7 @@ la_ruina_spawn_british_fragments = {
 			desc = ""
 			picture = "gfx/leaders/ENG/Portrait_Britain_Generic_land_1.dds"
 			expire = "1960.1.1"
-			ideology = democratic_socialist
+			ideology = marxism
 			traits = { }
 		}
 		add_ideas = la_ruina_fractured_state
@@ -348,7 +215,7 @@ la_ruina_spawn_french_fragments = {
 			desc = ""
 			picture = "gfx/leaders/FRA/Portrait_France_Generic_land_2.dds"
 			expire = "1966.1.1"
-			ideology = social_democrat
+			ideology = socialism
 			traits = { }
 		}
 		add_ideas = la_ruina_societal_collapse
@@ -477,7 +344,7 @@ la_ruina_spawn_japanese_fragments = {
 			desc = ""
 			picture = "gfx/leaders/JAP/Portrait_Japan_Generic_land_1.dds"
 			expire = "1978.1.1"
-			ideology = social_democrat
+			ideology = socialism
 			traits = { }
 		}
 		add_ideas = la_ruina_societal_collapse
@@ -617,7 +484,6 @@ la_ruina_spawn_chinese_fragments = {
 
 # ── MASTER SPAWN ─────────────────────────────────────────────────────────
 la_ruina_populate_world = {
-	la_ruina_spawn_american_fragments = yes
 	la_ruina_spawn_soviet_fragments = yes
 	la_ruina_spawn_british_fragments = yes
 	la_ruina_spawn_french_fragments = yes

@@ -1,0 +1,4 @@
+# The Montgomery attack decision is gone. The Inside Alabama category stays
+# as a status board; the five factions live in the backing event and their trees.
+la_ruina_alabama_category = {
+}

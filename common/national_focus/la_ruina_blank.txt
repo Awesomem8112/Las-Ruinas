@@ -1,0 +1,12 @@
+focus_tree = {
+	id = la_ruina_blank
+
+	# Score must stay 100. A positive factor beats every other tree, so every
+	# tag — including releasables that own nothing — is treated as having a
+	# unique focus tree and is added to the country-select list.
+	country = {
+		factor = 100
+	}
+
+	default = yes
+}

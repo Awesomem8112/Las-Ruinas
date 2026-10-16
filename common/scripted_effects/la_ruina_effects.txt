@@ -15,7 +15,7 @@ la_ruina_spawn_civil_war = {
 	if = {
 		limit = {
 			NOT = { has_government = democratic }
-			has_government_exponent = { ideology = democratic value > 0.15 }
+			democratic > 0.15
 		}
 		start_civil_war = {
 			ideology = democratic
@@ -25,7 +25,7 @@ la_ruina_spawn_civil_war = {
 	else_if = {
 		limit = {
 			NOT = { has_government = communism }
-			has_government_exponent = { ideology = communism value > 0.15 }
+			communism > 0.15
 		}
 		start_civil_war = {
 			ideology = communism
@@ -35,7 +35,7 @@ la_ruina_spawn_civil_war = {
 	else_if = {
 		limit = {
 			NOT = { has_government = fascism }
-			has_government_exponent = { ideology = fascism value > 0.15 }
+			fascism > 0.15
 		}
 		start_civil_war = {
 			ideology = fascism

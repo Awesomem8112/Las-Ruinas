@@ -1,0 +1,32 @@
+scripted_gui = {
+	la_ruina_alabama_gui = {
+		context_type = decision_category
+		window_name = "la_ruina_alabama_window"
+
+		visible = {
+			tag = ALA
+		}
+
+		properties = {
+			ala_valley = {
+				frame = ala_hold_valley
+			}
+			ala_birmingham = {
+				frame = ala_hold_birmingham
+			}
+			ala_montgomery = {
+				frame = ala_hold_montgomery
+			}
+			ala_wiregrass = {
+				frame = ala_hold_wiregrass
+			}
+			ala_mobile = {
+				frame = ala_hold_mobile
+			}
+			ala_front = {
+				frame = ala_front_frame
+				x = ala_front_x
+			}
+		}
+	}
+}

@@ -1,11 +1,16 @@
 # La Ruina - 1946 Bookmark
+# The country-select screen is built from history, before on_startup.
+# Only tags that already own a state on this date can be listed.
+# A listed tag with no owned states makes the game fill the major row
+# with every country tag, including ones that do not exist.
 
 bookmarks = {
 	bookmark = {
-		name = "la_ruina"
-		desc = "la_ruina"
+		name = "la_ruina_bookmark_name"
+		desc = "la_ruina_bookmark_desc"
 		date = 1946.6.1
 		picture = "GFX_select_date_1936"
+		default_country = "USA"
 		default = yes
 
 		"USA" = {
@@ -36,69 +41,13 @@ bookmarks = {
 			history = "la_ruina_bookmark_chi_history"
 			ideology = neutrality
 		}
-		"CHN" = {
-			history = "la_ruina_bookmark_chn_history"
-			ideology = communism
-		}
-		"CSA" = {
-			history = "la_ruina_bookmark_csa_history"
-			ideology = neutrality
-		}
-		"APC" = {
-			history = "la_ruina_bookmark_apc_history"
-			ideology = neutrality
-		}
-		"LAB" = {
-			history = "la_ruina_bookmark_lab_history"
-			ideology = communism
-		}
-		"ZHU" = {
-			history = "la_ruina_bookmark_zhu_history"
-			ideology = neutrality
-		}
-		"SIB" = {
-			history = "la_ruina_bookmark_sib_history"
-			ideology = neutrality
-		}
-		"SCO" = {
-			history = "la_ruina_bookmark_sco_history"
-			ideology = democratic
-		}
-		"PAC" = {
-			history = "la_ruina_bookmark_pac_history"
-			ideology = communism
-		}
-		"VIF" = {
-			history = "la_ruina_bookmark_vif_history"
-			ideology = fascism
-		}
-		"BAV" = {
-			history = "la_ruina_bookmark_bav_history"
-			ideology = democratic
-		}
-		"EGR" = {
-			history = "la_ruina_bookmark_egr_history"
-			ideology = communism
-		}
-		"KYU" = {
-			history = "la_ruina_bookmark_kyu_history"
-			ideology = democratic
-		}
-		"HOK" = {
-			history = "la_ruina_bookmark_hok_history"
-			ideology = communism
-		}
-		"MAC" = {
-			history = "la_ruina_bookmark_mac_history"
-			ideology = neutrality
-		}
-		"GUA" = {
-			history = "la_ruina_bookmark_gua_history"
-			ideology = democratic
-		}
 		"YUN" = {
 			history = "la_ruina_bookmark_yun_history"
 			ideology = neutrality
+		}
+
+		"---" = {
+			history = "OTHER_GATHERING_STORM_DESC"
 		}
 	}
 }

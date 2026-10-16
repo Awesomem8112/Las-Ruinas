@@ -46,5 +46,44 @@ ideas = {
 				supply_consumption_factor = 0.15
 			}
 		}
+
+		la_ruina_ala_mgm_claim_idea = {
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.05
+			}
+		}
+
+		la_ruina_ala_bhm_claim_idea = {
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = 0.10
+			}
+		}
+
+		la_ruina_ala_tva_claim_idea = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				stability_factor = 0.05
+			}
+		}
+
+		la_ruina_ala_wrg_claim_idea = {
+			picture = generic_manpower_bonus
+			modifier = {
+				conscription_factor = 0.10
+				political_power_gain = 0.10
+			}
+		}
+
+		la_ruina_ala_mob_claim_idea = {
+			picture = generic_goods_red_bonus
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.10
+			}
+		}
 	}
 }

@@ -1,0 +1,920 @@
+# Paint the contiguous 48. Alaska and Hawaii are left as states.
+# The seal is set only after the states actually receive their land, so a reload
+# does not retire a faction leader or restore anarchy after unification.
+la_ruina_paint_anarchy = {
+	ALA = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = ALA_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	ARZ = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = ARZ_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	ARK = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = ARK_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	CAL = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = CAL_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	CRD = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = CRD_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	CTC = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = CTC_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	DEL = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = DEL_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	FLA = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = FLA_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	GEA = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = GEA_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	IDA = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = IDA_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	ILL = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = ILL_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	INN = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = INN_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	IOW = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = IOW_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	KNS = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = KNS_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	KNT = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = KNT_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	LOU = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = LOU_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	MNE = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = MNE_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	MRY = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = MRY_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	MSA = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = MSA_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	MCH = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = MCH_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	MNN = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = MNN_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	MSP = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = MSP_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	MSO = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = MSO_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	MTN = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = MTN_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	NBR = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = NBR_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	NEV = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = NEV_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	NHP = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = NHP_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	NJS = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = NJS_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	NMX = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = NMX_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	NYK = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = NYK_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	NCR = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = NCR_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	NDK = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = NDK_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	OHI = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = OHI_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	OKL = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = OKL_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	ORE = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = ORE_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	PEN = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = PEN_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	RIS = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = RIS_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	SCR = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = SCR_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	SDK = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = SDK_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	TEN = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = TEN_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	TEX = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = TEX_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	UTA = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = UTA_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	VMT = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = VMT_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	VRG = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = VRG_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	WSH = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = WSH_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	WVG = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = WVG_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	WSC = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = WSC_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+	WYO = {
+		if = {
+			limit = { NOT = { has_country_flag = la_ruina_anarchy_sealed } }
+			set_cosmetic_tag = WYO_anarchy
+			set_politics = { ruling_party = neutrality }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = { our_right_to_survive }
+			}
+		}
+	}
+}
+
+la_ruina_seal_anarchy = {
+	ALA = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	ARZ = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	ARK = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	CAL = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	CRD = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	CTC = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	DEL = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	FLA = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	GEA = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	IDA = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	ILL = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	INN = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	IOW = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	KNS = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	KNT = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	LOU = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	MNE = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	MRY = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	MSA = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	MCH = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	MNN = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	MSP = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	MSO = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	MTN = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	NBR = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	NEV = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	NHP = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	NJS = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	NMX = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	NYK = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	NCR = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	NDK = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	OHI = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	OKL = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	ORE = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	PEN = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	RIS = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	SCR = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	SDK = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	TEN = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	TEX = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	UTA = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	VMT = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	VRG = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	WSH = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	WVG = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	WSC = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+	WYO = {
+		set_country_flag = la_ruina_anarchy_sealed
+	}
+}

@@ -1,0 +1,102 @@
+# La Ruina country tags. American fragment tags APC, CSA, LAB, and NEW are unused.
+
+# La Ruina country tags. American fragment tags APC, CSA, LAB, and NEW are unused.
+
+# La Ruina country tags. American fragment tags APC, CSA, LAB, and NEW are unused.
+
+# La Ruina - New Country Tags
+# These are the breakaway states, warlord factions, and successor nations
+# that emerge from the collapse of the major powers.
+
+# ── AMERICAN FRAGMENTS ───────────────────────────────────────────────────
+
+# ── SOVIET FRAGMENTS ─────────────────────────────────────────────────────
+ZHU = "countries/la_ruina/ZHU.txt"               # Western military faction
+SIB = "countries/la_ruina/SIB.txt"              # East of the Urals
+
+# ── BRITISH FRAGMENTS ────────────────────────────────────────────────────
+SCO = "countries/la_ruina/SCO.txt"              # Scottish independence
+IRE = "countries/la_ruina/IRE.txt"                 # Northern Ireland joins south
+WEL = "countries/la_ruina/WEL.txt"                  # Welsh labor movement
+
+# ── FRENCH FRAGMENTS ─────────────────────────────────────────────────────
+PAC = "countries/la_ruina/PAC.txt"                  # Communist north France
+VIF = "countries/la_ruina/VIF.txt"              # Fascist south France
+AQT = "countries/la_ruina/AQT.txt"           # Southwest autonomy
+
+# ── GERMAN FRAGMENTS ─────────────────────────────────────────────────────
+BAV = "countries/la_ruina/BAV.txt"                        # Catholic south
+EGR = "countries/la_ruina/EGR.txt"           # Soviet zone successor
+PRU = "countries/la_ruina/PRU.txt"      # Old guard militarists
+RHN = "countries/la_ruina/RHN.txt"             # French-occupied west
+
+# ── JAPANESE FRAGMENTS ───────────────────────────────────────────────────
+KYU = "countries/la_ruina/KYU.txt"               # Southern republic
+HOK = "countries/la_ruina/HOK.txt"                # Soviet-influenced north
+TOK = "countries/la_ruina/TOK.txt" # Militarist Tokyo
+
+# ── CHINESE FRAGMENTS ────────────────────────────────────────────────────
+MAC = "countries/la_ruina/MAC.txt"                      # Northwest Muslim warlords
+YUN = "countries/la_ruina/YUN.txt"                         # Southwest autonomy
+MAN = "countries/la_ruina/MAN.txt" # Post-Soviet Manchuria
+GUA = "countries/la_ruina/GUA.txt"             # Southern commercial republic
+
+# ── SOUTH/SOUTHEAST ASIAN FRAGMENTS ────────────────────────────────────
+
+# ── MIDDLE EAST/AFRICA FRAGMENTS ────────────────────────────────────────
+
+# ── United States, one country per state ──
+
+# ── United States, one country per state ──
+
+# ── United States, one country per state ──
+ALA = "countries/la_ruina/ALA - Alabama.txt"
+ALK = "countries/la_ruina/ALK - Alaska.txt"
+ARZ = "countries/la_ruina/ARZ - Arizona.txt"
+ARK = "countries/la_ruina/ARK - Arkansas.txt"
+CAL = "countries/la_ruina/CAL - California.txt"
+CRD = "countries/la_ruina/CRD - Colorado.txt"
+CTC = "countries/la_ruina/CTC - Connecticut.txt"
+DEL = "countries/la_ruina/DEL - Delaware.txt"
+FLA = "countries/la_ruina/FLA - Florida.txt"
+GEA = "countries/la_ruina/GEA - Georgia.txt"
+HWI = "countries/la_ruina/HWI - Hawaii.txt"
+IDA = "countries/la_ruina/IDA - Idaho.txt"
+ILL = "countries/la_ruina/ILL - Illinois.txt"
+INN = "countries/la_ruina/INN - Indiana.txt"
+IOW = "countries/la_ruina/IOW - Iowa.txt"
+KNS = "countries/la_ruina/KNS - Kansas.txt"
+KNT = "countries/la_ruina/KNT - Kentucky.txt"
+LOU = "countries/la_ruina/LOU - Louisiana.txt"
+MNE = "countries/la_ruina/MNE - Maine.txt"
+MRY = "countries/la_ruina/MRY - Maryland.txt"
+MSA = "countries/la_ruina/MSA - Massachusetts.txt"
+MCH = "countries/la_ruina/MCH - Michigan.txt"
+MNN = "countries/la_ruina/MNN - Minnesota.txt"
+MSP = "countries/la_ruina/MSP - Mississippi.txt"
+MSO = "countries/la_ruina/MSO - Missouri.txt"
+MTN = "countries/la_ruina/MTN - Montana.txt"
+NBR = "countries/la_ruina/NBR - Nebraska.txt"
+NEV = "countries/la_ruina/NEV - Nevada.txt"
+NHP = "countries/la_ruina/NHP - New Hampshire.txt"
+NJS = "countries/la_ruina/NJS - New Jersey.txt"
+NMX = "countries/la_ruina/NMX - New Mexico.txt"
+NYK = "countries/la_ruina/NYK - New York.txt"
+NCR = "countries/la_ruina/NCR - North Carolina.txt"
+NDK = "countries/la_ruina/NDK - North Dakota.txt"
+OHI = "countries/la_ruina/OHI - Ohio.txt"
+OKL = "countries/la_ruina/OKL - Oklahoma.txt"
+ORE = "countries/la_ruina/ORE - Oregon.txt"
+PEN = "countries/la_ruina/PEN - Pennsylvania.txt"
+RIS = "countries/la_ruina/RIS - Rhode Island.txt"
+SCR = "countries/la_ruina/SCR - South Carolina.txt"
+SDK = "countries/la_ruina/SDK - South Dakota.txt"
+TEN = "countries/la_ruina/TEN - Tennessee.txt"
+TEX = "countries/la_ruina/TEX - Texas.txt"
+UTA = "countries/la_ruina/UTA - Utah.txt"
+VMT = "countries/la_ruina/VMT - Vermont.txt"
+VRG = "countries/la_ruina/VRG - Virginia.txt"
+WSH = "countries/la_ruina/WSH - Washington.txt"
+WVG = "countries/la_ruina/WVG - West Virginia.txt"
+WSC = "countries/la_ruina/WSC - Wisconsin.txt"
+WYO = "countries/la_ruina/WYO - Wyoming.txt"

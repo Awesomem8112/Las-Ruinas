@@ -1,0 +1,61 @@
+# Faction rulers. Each one retires the Anarchist Commune.
+
+la_ruina_ala_leader_montgomery = {
+	set_politics = { ruling_party = neutrality }
+	retire_country_leader = yes
+	create_country_leader = {
+		name = "Colonel of the Capitol Militia"
+		desc = "la_ruina_ala_mgm_leader_desc"
+		picture = "gfx/leaders/USA/Portrait_USA_Generic_land_1.dds"
+		expire = "1965.1.1"
+		ideology = oligarchism
+	}
+}
+
+la_ruina_ala_leader_birmingham = {
+	set_politics = { ruling_party = neutrality }
+	retire_country_leader = yes
+	create_country_leader = {
+		name = "Chair of the Strike Committee"
+		desc = "la_ruina_ala_bhm_leader_desc"
+		picture = "gfx/leaders/USA/Portrait_USA_Generic_land_2.dds"
+		expire = "1965.1.1"
+		ideology = oligarchism
+	}
+}
+
+la_ruina_ala_leader_valley = {
+	set_politics = { ruling_party = neutrality }
+	retire_country_leader = yes
+	create_country_leader = {
+		name = "Director of the Valley Authority"
+		desc = "la_ruina_ala_tva_leader_desc"
+		picture = "gfx/leaders/USA/Portrait_USA_Generic_land_3.dds"
+		expire = "1965.1.1"
+		ideology = oligarchism
+	}
+}
+
+la_ruina_ala_leader_wiregrass = {
+	set_politics = { ruling_party = neutrality }
+	retire_country_leader = yes
+	create_country_leader = {
+		name = "Judge of the Courthouse Ring"
+		desc = "la_ruina_ala_wrg_leader_desc"
+		picture = "gfx/leaders/USA/Portrait_USA_Generic_land_1.dds"
+		expire = "1965.1.1"
+		ideology = oligarchism
+	}
+}
+
+la_ruina_ala_leader_mobile = {
+	set_politics = { ruling_party = neutrality }
+	retire_country_leader = yes
+	create_country_leader = {
+		name = "Commodore of the Harbor"
+		desc = "la_ruina_ala_mob_leader_desc"
+		picture = "gfx/leaders/USA/Portrait_USA_Generic_land_2.dds"
+		expire = "1965.1.1"
+		ideology = oligarchism
+	}
+}

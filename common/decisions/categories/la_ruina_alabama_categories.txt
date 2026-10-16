@@ -1,0 +1,15 @@
+la_ruina_alabama_category = {
+	icon = generic_political_actions
+	priority = 100
+	visible_when_empty = yes
+	scripted_gui = la_ruina_alabama_gui
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		tag = ALA
+		is_ai = no
+	}
+}

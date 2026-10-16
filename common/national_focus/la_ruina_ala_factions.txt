@@ -1,0 +1,537 @@
+# Five Alabama trees. Factor stays 0 so the blank tree remains the default
+# until the backing event loads one of these.
+
+focus_tree = {
+	id = la_ruina_ala_montgomery
+
+	country = {
+		factor = 0
+	}
+
+	focus = {
+		id = la_ruina_ala_mgm_seal
+		icon = GFX_goal_generic_national_unity
+		x = 10
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = la_ruina_ala.2
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_mgm_secure
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = la_ruina_ala_mgm_seal }
+		relative_position_id = la_ruina_ala_mgm_seal
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_manpower = 8000
+			add_war_support = 0.05
+			set_variable = { ala_hold_montgomery = 2 }
+			country_event = la_ruina_ala.3
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_mgm_break
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = la_ruina_ala_mgm_secure }
+		relative_position_id = la_ruina_ala_mgm_secure
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_war_support = 0.10
+			set_variable = { ala_hold_birmingham = 2 }
+			country_event = la_ruina_ala.4
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_mgm_unify
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = la_ruina_ala_mgm_break }
+		relative_position_id = la_ruina_ala_mgm_break
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			set_country_flag = la_ruina_ala_unified
+			add_stability = 0.10
+			set_variable = { ala_hold_montgomery = 2 }
+			set_variable = { ala_hold_birmingham = 2 }
+			set_variable = { ala_hold_valley = 2 }
+			set_variable = { ala_hold_wiregrass = 2 }
+			set_variable = { ala_hold_mobile = 2 }
+			country_event = la_ruina_ala.5
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_mgm_claim
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = la_ruina_ala_mgm_unify }
+		relative_position_id = la_ruina_ala_mgm_unify
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = la_ruina_ala_mgm_claim_idea
+			country_event = la_ruina_ala.6
+		}
+	}
+}
+
+focus_tree = {
+	id = la_ruina_ala_birmingham
+
+	country = {
+		factor = 0
+	}
+
+	focus = {
+		id = la_ruina_ala_bhm_mills
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 10
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = la_ruina_ala.7
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_bhm_secure
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = la_ruina_ala_bhm_mills }
+		relative_position_id = la_ruina_ala_bhm_mills
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_manpower = 8000
+			add_war_support = 0.05
+			set_variable = { ala_hold_birmingham = 2 }
+			country_event = la_ruina_ala.8
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_bhm_break
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = la_ruina_ala_bhm_secure }
+		relative_position_id = la_ruina_ala_bhm_secure
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_war_support = 0.10
+			set_variable = { ala_hold_montgomery = 2 }
+			country_event = la_ruina_ala.9
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_bhm_unify
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = la_ruina_ala_bhm_break }
+		relative_position_id = la_ruina_ala_bhm_break
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			set_country_flag = la_ruina_ala_unified
+			add_stability = 0.10
+			set_variable = { ala_hold_montgomery = 2 }
+			set_variable = { ala_hold_birmingham = 2 }
+			set_variable = { ala_hold_valley = 2 }
+			set_variable = { ala_hold_wiregrass = 2 }
+			set_variable = { ala_hold_mobile = 2 }
+			country_event = la_ruina_ala.10
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_bhm_claim
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = la_ruina_ala_bhm_unify }
+		relative_position_id = la_ruina_ala_bhm_unify
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = la_ruina_ala_bhm_claim_idea
+			country_event = la_ruina_ala.11
+		}
+	}
+}
+
+focus_tree = {
+	id = la_ruina_ala_valley
+
+	country = {
+		factor = 0
+	}
+
+	focus = {
+		id = la_ruina_ala_tva_authority
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 10
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = la_ruina_ala.12
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_tva_secure
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = la_ruina_ala_tva_authority }
+		relative_position_id = la_ruina_ala_tva_authority
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_manpower = 8000
+			add_war_support = 0.05
+			set_variable = { ala_hold_valley = 2 }
+			country_event = la_ruina_ala.13
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_tva_break
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = la_ruina_ala_tva_secure }
+		relative_position_id = la_ruina_ala_tva_secure
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_war_support = 0.10
+			set_variable = { ala_hold_wiregrass = 2 }
+			country_event = la_ruina_ala.14
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_tva_unify
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = la_ruina_ala_tva_break }
+		relative_position_id = la_ruina_ala_tva_break
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			set_country_flag = la_ruina_ala_unified
+			add_stability = 0.10
+			set_variable = { ala_hold_montgomery = 2 }
+			set_variable = { ala_hold_birmingham = 2 }
+			set_variable = { ala_hold_valley = 2 }
+			set_variable = { ala_hold_wiregrass = 2 }
+			set_variable = { ala_hold_mobile = 2 }
+			country_event = la_ruina_ala.15
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_tva_claim
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = la_ruina_ala_tva_unify }
+		relative_position_id = la_ruina_ala_tva_unify
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = la_ruina_ala_tva_claim_idea
+			country_event = la_ruina_ala.16
+		}
+	}
+}
+
+focus_tree = {
+	id = la_ruina_ala_wiregrass
+
+	country = {
+		factor = 0
+	}
+
+	focus = {
+		id = la_ruina_ala_wrg_ring
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 10
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = la_ruina_ala.17
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_wrg_secure
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = la_ruina_ala_wrg_ring }
+		relative_position_id = la_ruina_ala_wrg_ring
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_manpower = 8000
+			add_war_support = 0.05
+			set_variable = { ala_hold_wiregrass = 2 }
+			country_event = la_ruina_ala.18
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_wrg_break
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = la_ruina_ala_wrg_secure }
+		relative_position_id = la_ruina_ala_wrg_secure
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_war_support = 0.10
+			set_variable = { ala_hold_mobile = 2 }
+			country_event = la_ruina_ala.19
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_wrg_unify
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = la_ruina_ala_wrg_break }
+		relative_position_id = la_ruina_ala_wrg_break
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			set_country_flag = la_ruina_ala_unified
+			add_stability = 0.10
+			set_variable = { ala_hold_montgomery = 2 }
+			set_variable = { ala_hold_birmingham = 2 }
+			set_variable = { ala_hold_valley = 2 }
+			set_variable = { ala_hold_wiregrass = 2 }
+			set_variable = { ala_hold_mobile = 2 }
+			country_event = la_ruina_ala.20
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_wrg_claim
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = la_ruina_ala_wrg_unify }
+		relative_position_id = la_ruina_ala_wrg_unify
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = la_ruina_ala_wrg_claim_idea
+			country_event = la_ruina_ala.21
+		}
+	}
+}
+
+focus_tree = {
+	id = la_ruina_ala_mobile
+
+	country = {
+		factor = 0
+	}
+
+	focus = {
+		id = la_ruina_ala_mob_harbor
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 10
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = la_ruina_ala.22
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_mob_secure
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = la_ruina_ala_mob_harbor }
+		relative_position_id = la_ruina_ala_mob_harbor
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_manpower = 8000
+			add_war_support = 0.05
+			set_variable = { ala_hold_mobile = 2 }
+			country_event = la_ruina_ala.23
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_mob_break
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = la_ruina_ala_mob_secure }
+		relative_position_id = la_ruina_ala_mob_secure
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_war_support = 0.10
+			set_variable = { ala_hold_wiregrass = 2 }
+			country_event = la_ruina_ala.24
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_mob_unify
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = la_ruina_ala_mob_break }
+		relative_position_id = la_ruina_ala_mob_break
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			set_country_flag = la_ruina_ala_unified
+			add_stability = 0.10
+			set_variable = { ala_hold_montgomery = 2 }
+			set_variable = { ala_hold_birmingham = 2 }
+			set_variable = { ala_hold_valley = 2 }
+			set_variable = { ala_hold_wiregrass = 2 }
+			set_variable = { ala_hold_mobile = 2 }
+			country_event = la_ruina_ala.25
+		}
+	}
+
+	focus = {
+		id = la_ruina_ala_mob_claim
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = la_ruina_ala_mob_unify }
+		relative_position_id = la_ruina_ala_mob_unify
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = la_ruina_ala_mob_claim_idea
+			country_event = la_ruina_ala.26
+		}
+	}
+}
