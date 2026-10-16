@@ -1,0 +1,10 @@
+spriteTypes = {
+	# Vanilla names this portrait GFX_portrait_SPR_anarchist_commune, but the
+	# texture ships with La Resistance and is not in this install. The anarchist
+	# society icon is, and it is the face the lower forty-eight share.
+	spriteType = {
+		name = "GFX_portrait_SPR_anarchist_commune"
+		texturefile = "gfx/interface/ideas/spr_anarchist_society.dds"
+		legacy_lazy_load = no
+	}
+}

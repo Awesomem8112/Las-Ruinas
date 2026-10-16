@@ -1,0 +1,29 @@
+state={
+	id=376
+	name="STATE_376"
+	resources={
+		aluminium=28
+		coal=5
+		oil=8
+		steel=1
+	}
+
+	state_category = town
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = NMX
+		victory_points = {
+			12552 1
+		}
+	}
+	provinces={
+		1972 2102 3867 3883 4975 5044 8070 10642 10645 10867 10914 12552 12684 12720 12791 13649 13658 13662 13671 13672 13694 13713 13736 13758
+	}
+	manpower=461352
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

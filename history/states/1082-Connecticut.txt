@@ -1,0 +1,32 @@
+state={
+	id=1082
+	name="STATE_1082"
+	resources={
+		steel=1
+	}
+
+	state_category = town
+	history={
+		owner = USA
+		buildings = {
+			9847 = {
+				naval_base = 1
+			}
+			infrastructure = 4
+			9832 = {
+				naval_base = 3
+
+			}
+		}
+		add_core_of = CTC
+		victory_points = {
+			9850 5
+		}
+	}
+	provinces={
+		908 3710 6909 6911 9832 9847 9850 13516 13548
+	}
+	manpower=838036
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

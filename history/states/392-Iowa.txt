@@ -1,0 +1,26 @@
+state={
+	id=392
+	name="STATE_392"
+	resources={
+		steel=5
+	}
+
+	state_category = city
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 5
+		}
+		add_core_of = IOW
+		victory_points = {
+			1770 3
+		}
+	}
+	provinces={
+		1678 1770 1831 4691 7306 7458 7539 9892 9910 10478 10666 11788 11971 12418 12646 13472 13477 13479 13481 13489 13510 13524 13525 13526 13564 13569
+	}
+	manpower=2383170
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

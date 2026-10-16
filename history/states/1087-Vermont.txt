@@ -1,0 +1,25 @@
+state={
+	id=1087
+	name="STATE_1087"
+	resources={
+		steel=2
+	}
+
+	state_category = city
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = VMT
+		victory_points = {
+			13469 5
+		}
+	}
+	provinces={
+		4445 7629 9675 13158 13469 13482 13495
+	}
+	manpower=1170363
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

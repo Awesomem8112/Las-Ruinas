@@ -1,0 +1,27 @@
+state={
+	id=396
+	name="STATE_396"
+	resources={
+		coal=15
+		steel=2
+	}
+
+	state_category = large_city
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 5
+		}
+		add_core_of = INN
+		victory_points = {
+			7551 5
+		}
+	}
+	provinces={
+		695 870 1595 4437 4527 4531 6713 7551 9653 9654 9796 9810 10448 11621 11635 11637 11641 12437 13450 13533 13561 13577 13588 13608 13633 13640 13652
+	}
+	manpower=3546429
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

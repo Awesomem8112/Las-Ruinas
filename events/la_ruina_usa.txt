@@ -92,9 +92,9 @@ country_event = {
 }
 
 # ============================================================
-# USA EVENT 3: THE UNION BREAKS
-# The fracture lines: industrial north (labor), south (conservative/
-# military), west coast (progressive/isolationist).
+# USA EVENT 3: THE UNION BREAKS INTO ITS STATES
+# Fired on day 1. Alabama is handed over before the player switches,
+# then every other state leaves the Union.
 # ============================================================
 country_event = {
 	id = la_ruina_usa.3
@@ -105,51 +105,12 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	# Option A: The South secedes first — military officers lead it
-	option = {
-		name = la_ruina_usa.3.a  # "Governors of eleven states have signed the declaration."
-		ai_chance = { factor = 40 }
-
-		set_country_flag = la_ruina_collapsed
-		set_country_flag = la_ruina_usa_southern_secession
-		remove_ideas = la_ruina_societal_collapse
-		add_ideas = la_ruina_fractured_state
-
-		start_civil_war = {
-			ideology = neutrality
-			size = 0.40
-		}
+	trigger = {
+		tag = USA
 	}
 
-	# Option B: Labor councils declare autonomous zones in industrial cities
 	option = {
-		name = la_ruina_usa.3.b  # "Detroit, Chicago, and Pittsburgh are no longer answering Washington."
-		ai_chance = { factor = 35 }
-
-		set_country_flag = la_ruina_collapsed
-		set_country_flag = la_ruina_usa_labor_councils
-		remove_ideas = la_ruina_societal_collapse
-		add_ideas = la_ruina_fractured_state
-
-		start_civil_war = {
-			ideology = communism
-			size = 0.35
-		}
-	}
-
-	# Option C: Military coup — a general takes Washington "temporarily"
-	option = {
-		name = la_ruina_usa.3.c  # "The Joint Chiefs have assumed emergency authority."
-		ai_chance = { factor = 25 }
-
-		set_country_flag = la_ruina_collapsed
-		set_country_flag = la_ruina_usa_military_junta
-		remove_ideas = la_ruina_societal_collapse
-		add_ideas = la_ruina_fractured_state
-
-		start_civil_war = {
-			ideology = democratic
-			size = 0.45
-		}
+		name = la_ruina_usa.3.a
+		la_ruina_split_usa = yes
 	}
 }

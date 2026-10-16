@@ -1,0 +1,35 @@
+state={
+	id=359
+	name="STATE_359"
+	resources={
+		coal=7
+		steel=2
+	}
+
+	state_category = large_city
+	history={
+		owner = USA
+		buildings = {
+			6882 = {
+				naval_base = 1
+			}
+			infrastructure = 4
+			industrial_complex = 7
+			air_base = 4
+			6845 = {
+				naval_base = 8
+
+			}
+		}
+		add_core_of = NJS
+		victory_points = {
+			6882 5
+		}
+	}
+	provinces={
+		891 3693 3863 6845 6882 9801 9864 11740 11782 11900 13552 13563 13573 13609
+	}
+	manpower=4456088
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

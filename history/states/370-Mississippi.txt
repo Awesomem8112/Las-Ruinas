@@ -1,0 +1,32 @@
+state={
+	id=370
+	name="STATE_370"
+	resources={
+		aluminium=1
+		oil=2
+		steel=2
+	}
+
+	state_category = city
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 3
+			4464 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = MSP
+		victory_points = {
+			4464 1
+		}
+	}
+	provinces={
+		1615 4464 4510 4565 4650 7464 7668 8110 10410 10449 10753 11717 12328 12429 13712 13714 13724 13746 13761 13769 13783
+	}
+	manpower=2056797
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

@@ -1,0 +1,28 @@
+state={
+	id=389
+	name="STATE_389"
+	resources={
+		coal=11
+		oil=6
+		steel=15
+	}
+
+	state_category = town
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = NDK
+		victory_points = {
+			12566 1
+		}
+	}
+	provinces={
+		1752 1836 1870 3719 4759 4772 6722 7877 10685 10709 12566 12685 13416 13420 13423
+	}
+	manpower=617856
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

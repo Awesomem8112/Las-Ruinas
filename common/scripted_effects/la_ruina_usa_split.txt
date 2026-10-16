@@ -4,6 +4,9 @@ la_ruina_split_usa = {
 	ALA = {
 		transfer_state = 367
 		change_tag_from = USA
+	}
+	# change_tag_from clears the scope it runs in, so the event has to be a new country scope.
+	ALA = {
 		country_event = { id = la_ruina_ala.1 hours = 1 }
 	}
 	ALK = {

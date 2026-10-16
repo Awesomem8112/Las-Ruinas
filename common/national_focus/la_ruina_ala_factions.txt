@@ -78,6 +78,7 @@ focus_tree = {
 		completion_reward = {
 			drop_cosmetic_tag = yes
 			set_country_flag = la_ruina_ala_unified
+			la_ruina_ala_leader_montgomery = yes
 			add_stability = 0.10
 			set_variable = { ala_hold_montgomery = 2 }
 			set_variable = { ala_hold_birmingham = 2 }
@@ -185,6 +186,7 @@ focus_tree = {
 		completion_reward = {
 			drop_cosmetic_tag = yes
 			set_country_flag = la_ruina_ala_unified
+			la_ruina_ala_leader_birmingham = yes
 			add_stability = 0.10
 			set_variable = { ala_hold_montgomery = 2 }
 			set_variable = { ala_hold_birmingham = 2 }
@@ -292,6 +294,7 @@ focus_tree = {
 		completion_reward = {
 			drop_cosmetic_tag = yes
 			set_country_flag = la_ruina_ala_unified
+			la_ruina_ala_leader_valley = yes
 			add_stability = 0.10
 			set_variable = { ala_hold_montgomery = 2 }
 			set_variable = { ala_hold_birmingham = 2 }
@@ -399,6 +402,7 @@ focus_tree = {
 		completion_reward = {
 			drop_cosmetic_tag = yes
 			set_country_flag = la_ruina_ala_unified
+			la_ruina_ala_leader_wiregrass = yes
 			add_stability = 0.10
 			set_variable = { ala_hold_montgomery = 2 }
 			set_variable = { ala_hold_birmingham = 2 }
@@ -506,6 +510,7 @@ focus_tree = {
 		completion_reward = {
 			drop_cosmetic_tag = yes
 			set_country_flag = la_ruina_ala_unified
+			la_ruina_ala_leader_mobile = yes
 			add_stability = 0.10
 			set_variable = { ala_hold_montgomery = 2 }
 			set_variable = { ala_hold_birmingham = 2 }

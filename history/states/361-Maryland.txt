@@ -1,0 +1,49 @@
+state={
+	id=361
+	name="STATE_361"
+	resources={
+		coal=10
+		steel=3
+	}
+
+	state_category = city
+	history={
+		owner = USA
+		buildings = {
+			9786 = {
+				naval_base = 1
+			}
+			13610 = {
+				naval_base = 1
+			}
+			13611 = {
+				naval_base = 1
+			}
+			infrastructure = 4
+			industrial_complex = 4
+			dockyard = 2
+			air_base = 6
+			3957 = {
+				naval_base = 1
+				
+				naval_facility = 1
+			}
+			6984 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = MRY
+		victory_points = {
+			3957 40
+		}
+		victory_points = {
+			6984 5
+		}
+	}
+	provinces={
+		822 3957 6892 6929 6984 9786 11892 13589 13593 13595 13596 13598 13610 13611 13615 13616 13635
+	}
+	manpower=1908263
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

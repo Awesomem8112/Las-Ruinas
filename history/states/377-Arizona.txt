@@ -1,0 +1,30 @@
+state={
+	id=377
+	name="STATE_377"
+	resources={
+		aluminium=9
+		oil=7
+		steel=21
+		tungsten=4
+	}
+
+	state_category = town
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 2
+		}
+		add_core_of = ARZ
+		victory_points = {
+			853 3
+		}
+	}
+	provinces={
+		850 853 1793 3834 4796 6897 7747 7821 7920 8115 10573 10783 11814 12765 13648 13653 13656 13670 13692 13728 13753
+	}
+	manpower=542036
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

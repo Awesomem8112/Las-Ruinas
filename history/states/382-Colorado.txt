@@ -1,0 +1,28 @@
+state={
+	id=382
+	name="STATE_382"
+	resources={
+		coal=7
+		oil=13
+		tungsten=3
+	}
+
+	state_category = town
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = CRD
+		victory_points = {
+			1827 5
+		}
+	}
+	provinces={
+		868 1658 1738 1809 1827 3869 6887 7684 7780 7999 9792 10535 10588 11772 12570 12627 12642 13520 13531 13541 13545 13553 13574 13584 13634 13669
+	}
+	manpower=995034
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

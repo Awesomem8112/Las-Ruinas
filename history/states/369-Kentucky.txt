@@ -1,0 +1,28 @@
+state={
+	id=369
+	name="STATE_369"
+	resources={
+		coal=46
+		steel=1
+	}
+
+	state_category = city
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			air_base = 4
+		}
+		add_core_of = KNT
+		victory_points = {
+			1881 1
+		}
+	}
+	provinces={
+		954 1445 1881 4402 4452 6696 6974 7547 9727 10727 11890 12568 12637 12709 13613 13614 13622 13639 13641 13655 13682 13685 13689 13690
+	}
+	manpower=2853797
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

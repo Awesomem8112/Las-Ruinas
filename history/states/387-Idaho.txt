@@ -1,0 +1,27 @@
+state={
+	id=387
+	name="STATE_387"
+	resources={
+		chromium=1
+		steel=16
+		tungsten=16
+	}
+
+	state_category = town
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = IDA
+		victory_points = {
+			9616 1
+		}
+	}
+	provinces={
+		1789 1832 3781 4778 7845 9616 9695 10556 10602 10672 12124 12535 12607 13414 13419 13428 13434 13443 13444 13459 13476 13506
+	}
+	manpower=498545
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

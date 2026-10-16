@@ -1,0 +1,32 @@
+state={
+	id=261
+	name="STATE_261"
+	resources={
+		aluminium=7
+		coal=12
+		steel=24
+	}
+
+	state_category = metropolis
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 6
+		}
+		add_core_of = OHI
+		victory_points = {
+			6890 10
+		}
+		victory_points = {
+			11760 5
+		}
+	}
+	provinces={
+		659 689 827 831 882 3685 3853 3872 4442 4601 6855 6874 6890 9760 9775 9808 9825 11760 11776 11791 13154 13529 13537 13556 13570 13579 13591 13602 13612 13621 13627 13629
+	}
+	manpower=5637476
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

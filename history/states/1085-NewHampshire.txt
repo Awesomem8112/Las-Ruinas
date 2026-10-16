@@ -1,0 +1,30 @@
+state={
+	id=1085
+	name="STATE_1085"
+	resources={
+		steel=2
+	}
+
+	state_category = city
+	history={
+		owner = USA
+		buildings = {
+			13486 = {
+				naval_base = 1
+			}
+			infrastructure = 4
+			industrial_complex = 1
+			dockyard = 1
+		}
+		add_core_of = NHP
+		victory_points = {
+			733 5
+		}
+	}
+	provinces={
+		733 3712 3715 10481 13470 13480 13486 13501
+	}
+	manpower=1197784
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

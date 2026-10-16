@@ -1,0 +1,29 @@
+state={
+	id=379
+	name="STATE_379"
+	resources={
+		aluminium=23
+		oil=3
+		steel=65
+		tungsten=29
+	}
+
+	state_category = rural
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			4799 = { dam_mountain = 1 }
+		}
+		add_core_of = NEV
+		victory_points = {
+			4799 5
+		}
+	}
+	provinces={
+		1862 4521 4607 4736 4799 4816 7756 7827 7879 10422 10591 12134 12399 12425 13492 13500 13507 13518 13549 13566 13582 13620
+	}
+	manpower=257063
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

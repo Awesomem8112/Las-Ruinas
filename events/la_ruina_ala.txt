@@ -1,0 +1,384 @@
+add_namespace = la_ruina_ala
+
+# Fired one hour after the player becomes Alabama. Five ways out of anarchy, no takebacks.
+country_event = {
+	id = la_ruina_ala.1
+	title = la_ruina_ala.1.t
+	desc = la_ruina_ala.1.d
+	picture = GFX_report_event_spr_anarchists
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	timeout_days = 3650
+
+	trigger = {
+		tag = ALA
+		is_ai = no
+		NOT = { has_country_flag = la_ruina_ala_faction_chosen }
+	}
+
+	option = {
+		name = la_ruina_ala.1.mgm
+		ai_chance = { factor = 0 }
+		set_country_flag = la_ruina_ala_faction_chosen
+		set_country_flag = la_ruina_ala_faction_montgomery
+		load_focus_tree = la_ruina_ala_montgomery
+	}
+
+	option = {
+		name = la_ruina_ala.1.bhm
+		ai_chance = { factor = 0 }
+		set_country_flag = la_ruina_ala_faction_chosen
+		set_country_flag = la_ruina_ala_faction_birmingham
+		load_focus_tree = la_ruina_ala_birmingham
+	}
+
+	option = {
+		name = la_ruina_ala.1.tva
+		ai_chance = { factor = 0 }
+		set_country_flag = la_ruina_ala_faction_chosen
+		set_country_flag = la_ruina_ala_faction_valley
+		load_focus_tree = la_ruina_ala_valley
+	}
+
+	option = {
+		name = la_ruina_ala.1.wrg
+		ai_chance = { factor = 0 }
+		set_country_flag = la_ruina_ala_faction_chosen
+		set_country_flag = la_ruina_ala_faction_wiregrass
+		load_focus_tree = la_ruina_ala_wiregrass
+	}
+
+	option = {
+		name = la_ruina_ala.1.mob
+		ai_chance = { factor = 0 }
+		set_country_flag = la_ruina_ala_faction_chosen
+		set_country_flag = la_ruina_ala_faction_mobile
+		load_focus_tree = la_ruina_ala_mobile
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.2
+	title = la_ruina_ala.2.t
+	desc = la_ruina_ala.2.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.2.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.3
+	title = la_ruina_ala.3.t
+	desc = la_ruina_ala.3.d
+	picture = GFX_report_event_mil_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.3.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.4
+	title = la_ruina_ala.4.t
+	desc = la_ruina_ala.4.d
+	picture = GFX_report_event_civil_war
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.4.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.5
+	title = la_ruina_ala.5.t
+	desc = la_ruina_ala.5.d
+	picture = GFX_report_event_spr_anarchists
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.5.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.6
+	title = la_ruina_ala.6.t
+	desc = la_ruina_ala.6.d
+	picture = GFX_report_event_mil_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.6.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.7
+	title = la_ruina_ala.7.t
+	desc = la_ruina_ala.7.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.7.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.8
+	title = la_ruina_ala.8.t
+	desc = la_ruina_ala.8.d
+	picture = GFX_report_event_mil_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.8.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.9
+	title = la_ruina_ala.9.t
+	desc = la_ruina_ala.9.d
+	picture = GFX_report_event_civil_war
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.9.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.10
+	title = la_ruina_ala.10.t
+	desc = la_ruina_ala.10.d
+	picture = GFX_report_event_spr_anarchists
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.10.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.11
+	title = la_ruina_ala.11.t
+	desc = la_ruina_ala.11.d
+	picture = GFX_report_event_mil_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.11.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.12
+	title = la_ruina_ala.12.t
+	desc = la_ruina_ala.12.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.12.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.13
+	title = la_ruina_ala.13.t
+	desc = la_ruina_ala.13.d
+	picture = GFX_report_event_mil_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.13.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.14
+	title = la_ruina_ala.14.t
+	desc = la_ruina_ala.14.d
+	picture = GFX_report_event_civil_war
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.14.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.15
+	title = la_ruina_ala.15.t
+	desc = la_ruina_ala.15.d
+	picture = GFX_report_event_spr_anarchists
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.15.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.16
+	title = la_ruina_ala.16.t
+	desc = la_ruina_ala.16.d
+	picture = GFX_report_event_mil_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.16.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.17
+	title = la_ruina_ala.17.t
+	desc = la_ruina_ala.17.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.17.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.18
+	title = la_ruina_ala.18.t
+	desc = la_ruina_ala.18.d
+	picture = GFX_report_event_mil_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.18.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.19
+	title = la_ruina_ala.19.t
+	desc = la_ruina_ala.19.d
+	picture = GFX_report_event_civil_war
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.19.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.20
+	title = la_ruina_ala.20.t
+	desc = la_ruina_ala.20.d
+	picture = GFX_report_event_spr_anarchists
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.20.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.21
+	title = la_ruina_ala.21.t
+	desc = la_ruina_ala.21.d
+	picture = GFX_report_event_mil_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.21.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.22
+	title = la_ruina_ala.22.t
+	desc = la_ruina_ala.22.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.22.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.23
+	title = la_ruina_ala.23.t
+	desc = la_ruina_ala.23.d
+	picture = GFX_report_event_mil_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.23.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.24
+	title = la_ruina_ala.24.t
+	desc = la_ruina_ala.24.d
+	picture = GFX_report_event_civil_war
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.24.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.25
+	title = la_ruina_ala.25.t
+	desc = la_ruina_ala.25.d
+	picture = GFX_report_event_spr_anarchists
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.25.a
+	}
+}
+
+country_event = {
+	id = la_ruina_ala.26
+	title = la_ruina_ala.26.t
+	desc = la_ruina_ala.26.d
+	picture = GFX_report_event_mil_generic
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = la_ruina_ala.26.a
+	}
+}

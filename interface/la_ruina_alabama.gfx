@@ -1,0 +1,43 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_la_ruina_ala_valley"
+		texturefile = "gfx/interface/la_ruina/ala_valley.tga"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_la_ruina_ala_birmingham"
+		texturefile = "gfx/interface/la_ruina/ala_region.tga"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_la_ruina_ala_montgomery"
+		texturefile = "gfx/interface/la_ruina/ala_region.tga"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_la_ruina_ala_wiregrass"
+		texturefile = "gfx/interface/la_ruina/ala_region.tga"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_la_ruina_ala_mobile"
+		texturefile = "gfx/interface/la_ruina/ala_region.tga"
+		noOfFrames = 2
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_la_ruina_ala_front"
+		texturefile = "gfx/interface/la_ruina/ala_front.tga"
+		noOfFrames = 4
+		legacy_lazy_load = no
+	}
+}

@@ -1,0 +1,78 @@
+guiTypes = {
+	containerWindowType = {
+		name = "la_ruina_alabama_window"
+		position = { x = 0 y = 0 }
+		size = { width = 340 height = 250 }
+
+		iconType = {
+			name = "ala_valley"
+			spriteType = "GFX_la_ruina_ala_valley"
+			position = { x = 10 y = 8 }
+		}
+
+		iconType = {
+			name = "ala_birmingham"
+			spriteType = "GFX_la_ruina_ala_birmingham"
+			position = { x = 10 y = 56 }
+		}
+
+		iconType = {
+			name = "ala_montgomery"
+			spriteType = "GFX_la_ruina_ala_montgomery"
+			position = { x = 175 y = 56 }
+		}
+
+		iconType = {
+			name = "ala_wiregrass"
+			spriteType = "GFX_la_ruina_ala_wiregrass"
+			position = { x = 10 y = 132 }
+		}
+
+		iconType = {
+			name = "ala_mobile"
+			spriteType = "GFX_la_ruina_ala_mobile"
+			position = { x = 175 y = 132 }
+		}
+
+		iconType = {
+			name = "ala_front"
+			spriteType = "GFX_la_ruina_ala_front"
+			position = { x = 0 y = 8 }
+		}
+
+		instantTextBoxType = {
+			name = "ala_valley_label"
+			position = { x = 18 y = 18 }
+			text = la_ruina_ala_valley
+			font = "hoi_18mbs"
+		}
+
+		instantTextBoxType = {
+			name = "ala_birmingham_label"
+			position = { x = 18 y = 78 }
+			text = la_ruina_ala_birmingham
+			font = "hoi_18mbs"
+		}
+
+		instantTextBoxType = {
+			name = "ala_montgomery_label"
+			position = { x = 183 y = 78 }
+			text = la_ruina_ala_montgomery
+			font = "hoi_18mbs"
+		}
+
+		instantTextBoxType = {
+			name = "ala_wiregrass_label"
+			position = { x = 18 y = 154 }
+			text = la_ruina_ala_wiregrass
+			font = "hoi_18mbs"
+		}
+
+		instantTextBoxType = {
+			name = "ala_mobile_label"
+			position = { x = 183 y = 154 }
+			text = la_ruina_ala_mobile
+			font = "hoi_18mbs"
+		}
+	}
+}

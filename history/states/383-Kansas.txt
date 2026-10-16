@@ -1,0 +1,31 @@
+state={
+	id=383
+	name="STATE_383"
+	resources={
+		coal=4
+		oil=16
+	}
+
+	state_category = city
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 1
+		}
+		add_core_of = KNS
+		victory_points = {
+			7892 3
+		}
+		victory_points = {
+			4757 1
+		}
+	}
+	provinces={
+		1352 1753 4586 4740 4757 4811 4814 4871 7834 7892 9802 10340 10532 12024 12513 13565 13567 13571 13576 13578 13585 13606 13661
+	}
+	manpower=1840209
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

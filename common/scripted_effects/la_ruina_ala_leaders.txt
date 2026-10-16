@@ -1,4 +1,4 @@
-# Faction rulers. Each one retires the Anarchist Commune.
+# Faction rulers. They take office only when that faction unifies the state.
 
 la_ruina_ala_leader_montgomery = {
 	set_politics = { ruling_party = neutrality }

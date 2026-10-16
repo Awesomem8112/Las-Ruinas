@@ -1,0 +1,27 @@
+state={
+	id=394
+	name="STATE_394"
+	resources={
+		oil=1
+		steel=58
+	}
+
+	state_category = city
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 4
+		}
+		add_core_of = WSC
+		victory_points = {
+			12357 5
+		}
+	}
+	provinces={
+		703 926 1560 1760 1849 3699 4029 4166 4738 4834 7776 7829 9657 9678 10341 10526 12357 12456 13418 13425 13429 13438 13439 13448 13453 13457 13458 13478 13504
+	}
+	manpower=3169106
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

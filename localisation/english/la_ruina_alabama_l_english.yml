@@ -1,0 +1,18 @@
+﻿l_english:
+ la_ruina_usa.3.t:0 "The Union Breaks"
+ la_ruina_usa.3.d:0 "The governors have stopped answering Washington. Each state is taking its own seal, its own militia, and its own capital. From the Atlantic to the Pacific, the United States is now only a name. Alabama is the ground still under your feet."
+ la_ruina_usa.3.a:0 "Alabama stands alone."
+
+ la_ruina_alabama_category:0 "Inside Alabama"
+ la_ruina_alabama_category_desc:0 "The state on the world map is one country. Inside it, five smaller nations are still fighting over the counties."
+
+ la_ruina_alabama_attack:0 "Order the attack from Montgomery"
+ la_ruina_alabama_attack_desc:0 "Montgomery's militia steps off. Each day the front moves, and a neighboring hold changes hands when the line crosses it."
+ la_ruina_ala_attack_tt:0 "The front advances one step each day until Birmingham, the Tennessee Valley, the Wiregrass, and Mobile have fallen."
+ la_ruina_ala_attack_button:0 "Order the attack"
+
+ la_ruina_ala_valley:0 "Tennessee Valley"
+ la_ruina_ala_birmingham:0 "Birmingham"
+ la_ruina_ala_montgomery:0 "Montgomery"
+ la_ruina_ala_wiregrass:0 "Wiregrass"
+ la_ruina_ala_mobile:0 "Mobile"

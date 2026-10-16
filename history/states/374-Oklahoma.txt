@@ -1,0 +1,28 @@
+state={
+	id=374
+	name="STATE_374"
+	resources={
+		aluminium=17
+		oil=37
+	}
+
+	state_category = city
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			air_base = 2
+		}
+		add_core_of = OKL
+		victory_points = {
+			1806 1
+		}
+	}
+	provinces={
+		1618 1806 2043 4919 5103 6803 7762 7904 7945 8025 9822 10702 10798 11743 11802 13650 13657 13660 13663 13664 13666 13697 13699 13705 13710
+	}
+	manpower=2243613
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

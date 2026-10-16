@@ -1,0 +1,27 @@
+state={
+	id=364
+	name="STATE_364"
+
+	state_category = city
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			7202 = {
+				naval_base = 2
+
+			}
+		}
+		add_core_of = SCR
+		victory_points = {
+			7202 1
+		}
+	}
+	provinces={
+		1485 1547 3994 4491 4653 7012 7134 7202 7527 10029 10047 11927 13706 13709 13718 13719 13720 13731 13733 13742 13755 13765
+	}
+	manpower=1976462
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}

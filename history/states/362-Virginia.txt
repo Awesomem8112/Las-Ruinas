@@ -1,0 +1,44 @@
+state={
+	id=362
+	name="STATE_362"
+	resources={
+		coal=29
+	}
+
+	state_category = large_city
+	history={
+		owner = USA
+		buildings = {
+			873 = {
+				naval_base = 1
+			}
+			13637 = {
+				naval_base = 1
+			}
+			13642 = {
+				naval_base = 1
+			}
+			13643 = {
+				naval_base = 1
+			}
+			infrastructure = 4
+			industrial_complex = 2
+			dockyard = 4
+			air_base = 6
+			fuel_silo = 1
+		}
+		add_core_of = VRG
+		victory_points = {
+			3823 15
+		}
+		victory_points = {
+			865 10
+		}
+	}
+	provinces={
+		865 873 951 1506 3823 3917 6846 7466 7558 10343 10412 11738 11841 11873 11888 13617 13619 13626 13628 13630 13637 13642 13643 13646 13665 13673 13680 13683 13691 13693 13695 13696
+	}
+	manpower=2435236
+	buildings_max_level_factor=1.000
+	local_supplies=0.0
+}
